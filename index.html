@@ -4,33 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>dgd</title>
+    <link rel="shortcut icon" href="assets/me.webp" type="image/x-icon">
+    <title>dgd.sh</title>
 </head>
 <body>
-    <div id="info-container">
-        <img id="logo" src="assets/me.jpg" alt="">
-        <h1>Daniel Durling</h1>
-        <div>
-            <h2>Profiles</h2>
-            <p>
-                <img class="svg" src="assets/github.svg" alt="">
-                <a href="https://github.com/daqnal">Github</a>
-            </p>
-            <p>
-                <img class="svg" src="assets/mail.svg" alt="">
-                <a href="mailto:dan@dgd.sh">Email</a>
-            </p>
-            <p>
-                <img class="svg" src="assets/matrix.svg" alt="">
-                <span>Matrix: @dan:dgd.sh</span>
-            </p>
-            <!-- youtube? -->
-        </div>
-        <div>
-            <h2>Links</h2>
-            <!-- Wallpapers -->
-            <!-- Chess -->
-            <!-- <a href="https://dgd.sh/rat">Rat</a> -->
+    <div id="content-border-container">
+        <div id="media-container">
+            <img id="logo" src="assets/me.webp" alt="">
+            <div id="text-container">
+                <div id="titles-container">
+                    <h1><b>Daniel Durling</b></h1>
+                    <div class="marquee">
+                        <ul class="marquee__content">
+                            <li>Front-end development</li>
+                            <li>Video editing</li>
+                            <li>Linux configuration</li>
+                            <li>Anything else tech-related</li>
+                        </ul>
+                        <ul class="marquee__content" aria-hidden="true">
+                            <li>Front-end development</li>
+                            <li>Video editing</li>
+                            <li>Linux configuration</li>
+                            <li>Anything else tech-related</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <a href="https://github.com/daqnal" class="info-button" id="github-button">
+                    <img class="svg" src="assets/github.svg" alt="github icon">
+                    <p class="info-text">Github</p>
+                </a>
+    
+                <a href="mailto:dan@dgd.sh" class="info-button" id="email-button">
+                    <img class="svg" src="assets/mail.svg" alt="email icon">
+                    <p class="info-text">Email</p>
+                </a>
+    
+                <a href="https://signal.me/#eu/RI5DRaWfTZWrZM5BgyAkvyzfwwgKilA0+p53TPC6WqNiqmOjd1JI14SwhWM+sd35" class="info-button" id="signal-button">
+                    <img src="assets/message.svg" alt="message icon" class="svg">
+                    <p class="info-text">Signal</p>
+                </a>
+    
+                <a href="https://matrix.to/#/@dan:dgd.sh" class="info-button" id="matrix-button">
+                    <img class="svg" src="assets/matrix.svg" alt="matrix protocol icon">
+                    <p class="info-text">Matrix</p>
+                </a>
+                <!-- youtube? -->
+            </div>
         </div>
     </div>
 
