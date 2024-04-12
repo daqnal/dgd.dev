@@ -150,7 +150,7 @@ img {
 }
 
 #github-button:hover::after {
-    content: "/daqnal";
+    content: "daqnal";
     font-size: 1.2rem;
     margin-left: 0.35rem;
 }
@@ -167,8 +167,8 @@ img {
     margin-left: 0.35rem;
 }
 
-#matrix-button:hover::after {
-    content: "dan:dgd.sh";
+#linkedin-button:hover::after {
+    content: "dgdur";
     font-size: 1.2rem;
     margin-left: 0.35rem;
 }
