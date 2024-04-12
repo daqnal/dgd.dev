@@ -30,6 +30,7 @@ body {
     color: #c0caf5;
     text-align: center;
     font-family: 'Kanit', Arial, Helvetica, sans-serif;
+    font-display: swap;
     
     background: linear-gradient(135deg, #1a1b26, #7aa2f7, #bb9af7, #f7768e);
     background-size: 400% 400%;
