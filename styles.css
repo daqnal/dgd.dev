@@ -8,9 +8,12 @@
 html {
     background-color: #1a1b26;
     overflow: hidden;
+
+    /* For desktops, use 100vh as the height of everything */
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    min-height: -webkit-fill-available;
+    /* For mobile devices, since bars crop the viewport, use this property that works somehow */
+    height: -webkit-fill-available;
+
     width: 100vw;
 }
 
