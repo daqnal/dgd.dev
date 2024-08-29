@@ -10,8 +10,8 @@
 ### Languages
 - Python
 - JavaScript
-- Rust
-- TypeScript
+- Rust*
+- TypeScript*
 - Lua
 - Bash
 - HTML
@@ -20,12 +20,14 @@
 ### Technologies
 - Linux
 - TailwindCSS
-- PicoCSS
-- Pagefind
-- Hugo
-- daisyUI
+- PicoCSS*
+- Pagefind*
+- Hugo*
+- daisyUI*
 - React
 
 ### Software
 - Davinci Resolve
 - Inkscape
+- Adobe Premiere Pro
+- 
