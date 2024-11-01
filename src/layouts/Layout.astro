@@ -3,6 +3,7 @@ interface Props {
 	title: string;
 }
 
+import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav.jsx";
 
 const { title } = Astro.props;
@@ -36,9 +37,10 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/webp" href="/logo.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+        <ViewTransitions />
 	</head>
 	<body>
-        <div id="content-wrapper" class="bg-base-200/90">
+        <div id="content-wrapper">
             <Nav />
             <slot />
         </div>
@@ -66,11 +68,6 @@ const { title } = Astro.props;
         #content-wrapper {
             width: 97vw;
             height: 97vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: var(--rounded-box);
-            backdrop-filter: blur(50px);
         }
 
         body {

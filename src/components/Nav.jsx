@@ -1,13 +1,41 @@
-import "../consts.ts";
+import { SITE_TITLE } from "../consts.ts";
+import "./Nav.css"
 import { SITE_DOMAIN } from "../consts.ts";
-import { LuPalette } from "react-icons/lu";
+import { LuPalette, LuHome, LuNewspaper, LuUser } from "react-icons/lu";
 
 export default function Nav() {
     return (
-        <>
-            <span>{SITE_DOMAIN}</span>
-            <ThemeSwitcher />
-        </>
+        <div id="nav" className="bg-base-200/70 p-1">
+            <span>
+              <a href="/" className="btn btn-sm">
+                <img src="/logo.webp" alt="logo" id="mini-nav-logo"/>
+                {SITE_TITLE}
+              </a>
+            </span>
+
+            <div id="nav-button-container">
+
+              <div className="tooltip tooltip-bottom" data-tip="Home">
+                <a href="/" className="btn btn-sm btn-circle">
+                  <LuHome />
+                </a>
+              </div>
+
+              <div className="tooltip tooltip-bottom" data-tip="Articles">
+                <a href="/articles" className="btn btn-sm btn-circle ml-1">
+                  <LuNewspaper />
+                </a>
+              </div>
+
+              <div className="tooltip tooltip-bottom" data-tip="About">
+                <a href="/about" className="btn btn-sm btn-circle ml-1">
+                  <LuUser />
+                </a>
+              </div>
+              
+              <ThemeSwitcher />
+            </div>
+        </div>
     );
 }
 
@@ -15,7 +43,7 @@ export default function Nav() {
 function ThemeSwitcher() {
     return (
         <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn btn-sm m-1">
+        <div tabIndex={0} role="button" className="btn btn-sm ml-1">
           <LuPalette />
           Theme
           <svg
