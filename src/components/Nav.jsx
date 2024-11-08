@@ -1,7 +1,7 @@
 import { SITE_TITLE } from "../consts.ts";
 import "./Nav.css"
 import { SITE_DOMAIN } from "../consts.ts";
-import { LuPalette, LuHome, LuNewspaper, LuUser } from "react-icons/lu";
+import { Palette, Home, Newspaper, User } from "lucide-react";
 
 export default function Nav() {
     return (
@@ -17,19 +17,19 @@ export default function Nav() {
 
               <div className="tooltip tooltip-bottom" data-tip="Home">
                 <a href="/" className="btn btn-sm btn-circle">
-                  <LuHome />
+                  <Home className="icon" />
                 </a>
               </div>
 
               <div className="tooltip tooltip-bottom" data-tip="Articles">
                 <a href="/articles" className="btn btn-sm btn-circle ml-1">
-                  <LuNewspaper />
+                  <Newspaper className="icon" />
                 </a>
               </div>
 
               <div className="tooltip tooltip-bottom" data-tip="About">
                 <a href="/about" className="btn btn-sm btn-circle ml-1">
-                  <LuUser />
+                  <User className="icon" />
                 </a>
               </div>
               
@@ -44,7 +44,7 @@ function ThemeSwitcher() {
     return (
         <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-sm ml-1">
-          <LuPalette />
+          <Palette className="icon" />
           Theme
           <svg
             width="12px"
@@ -55,7 +55,7 @@ function ThemeSwitcher() {
             <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
           </svg>
         </div>
-        <ul tabIndex={0} className="dropdown-content bg-base-100 rounded-box z-[1] w-30 p-2 shadow-2xl" data-choose-theme>
+        <ul tabIndex={0} className="dropdown-content bg-base-100 rounded-box z-40 w-30 p-2 shadow-2xl" data-choose-theme>
           <li>
             <input
               type="radio"

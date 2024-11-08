@@ -11,6 +11,11 @@
     border-radius: var(--rounded-badge);
 }
 
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
 #mini-nav-logo {
     width: 16px;
     height: 16px;
