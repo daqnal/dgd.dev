@@ -8,29 +8,32 @@ export default function Nav() {
     return (
         <div id="nav" className="bg-base-200/70 p-2">
             <span>
-              <a href="/" className="btn btn-sm">
-                <img src="/logo.webp" alt="logo" id="mini-nav-logo"/>
+              <a href="/" className="btn btn-sm btn-ghost pl-1 pr-2">
+                <img src="/images/logo.webp" alt="logo" id="mini-nav-logo"/>
                 {SITE_TITLE}
               </a>
             </span>
 
-            <div id="nav-button-container">
+            <div id="nav-btn-container" className="flex">
 
-              <div className="tooltip tooltip-bottom" data-tip="Home">
-                <a href="/" className="btn btn-sm btn-circle">
-                  <Home className="icon" />
+              <div>
+                <a href="/" className="btn btn-sm btn-circle nav-btn">
+                  <Home className="icon nav-btn-icon" />
+                  <span className="nav-btn-text">Home</span>
                 </a>
               </div>
 
-              <div className="tooltip tooltip-bottom" data-tip="Articles">
-                <a href="/" className="btn btn-sm btn-circle ml-1">
-                  <Newspaper className="icon" />
+              <div>
+                <a href="/" className="btn btn-sm btn-circle ml-1 nav-btn">
+                  <Newspaper className="icon nav-btn-icon" />
+                  <span className="nav-btn-text">Posts</span>
                 </a>
               </div>
 
-              <div className="tooltip tooltip-bottom" data-tip="About">
-                <a href="/" className="btn btn-sm btn-circle ml-1">
-                  <User className="icon" />
+              <div>
+                <a href="/" className="btn btn-sm btn-circle ml-1 nav-btn">
+                  <User className="icon nav-btn-icon" />
+                  <span className="nav-btn-text">About</span>
                 </a>
               </div>
               
@@ -43,20 +46,9 @@ export default function Nav() {
 
 function ThemeSwitcher() {
 
-  const [hovered, setHovered] = useState(false);
-
-  // if (hovered) {
-  //   console.log("hovering")
-  // } else {
-  //   console.log("not hovering")
-  // }
-
   return (
       <div className="dropdown">
-      <div tabIndex={0} role="button" id="theme-button" className="btn btn-sm ml-1"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
+      <div tabIndex={0} role="button" id="theme-button" className="btn btn-sm ml-1">
         <Palette className="icon" />
         Theme
         <svg
