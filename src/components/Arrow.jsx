@@ -1,0 +1,16 @@
+import { ChevronDown, ChevronUp } from "lucide-react";
+
+export default function Arrow(props) {
+  let arrowIcon;
+  if (props.orientation === "up") {
+    arrowIcon = <ChevronUp />;
+  } else {
+    arrowIcon = <ChevronDown />;
+  }
+
+  return (
+    <button className="btn btn-circle bg-base-200/70 border-none">
+      {arrowIcon}
+    </button>
+  );
+}

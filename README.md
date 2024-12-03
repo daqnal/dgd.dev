@@ -9,3 +9,7 @@
 - daisyui
 - theme-change
 - animejs??
+
+---
+
+CSS stacking contexts: https://www.joshwcomeau.com/css/stacking-contexts/

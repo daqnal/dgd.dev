@@ -1,88 +1,66 @@
 #nav {
-    display: flex;
-    width: 100%;
-    height: 48px;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: var(--rounded-badge);
-    backdrop-filter: blur(50px);
+  z-index: 7;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--rounded-badge);
+  backdrop-filter: blur(50px);
 }
 
 .btn {
-    border-radius: var(--rounded-badge);
-    /* height: 100%; */
+  border-radius: var(--rounded-badge);
 }
 
 .icon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 #mini-nav-logo {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
-/* #nav-btn-container {
-    background-color: rgba(0, 0, 0, 0.3);
-} */
-
 @keyframes text-appear {
-    0% {
-        /* translate: -20px 0px; */
-        display: none;
-        font-size: 0%;
-    }
+  0% {
+    display: none;
+    font-size: 0%;
+  }
 
-    1% {
-        display: block;
-    }
+  1% {
+    display: block;
+  }
 
-    100% {
-        /* translate: 0px 0px; */
-        font-size: 100%;
-    }
+  100% {
+    font-size: 100%;
+  }
 }
 
 .nav-btn-text {
-    font-size: 0%;
-    /* animation: text-appear .2s; */
+  font-size: 0%;
 }
 
 .nav-btn:hover > .nav-btn-text {
-    /* display: block; */
-    font-size: 100%;
-    animation: text-appear .2s ease-in-out;
+  font-size: 100%;
+  animation: text-appear 0.2s ease-in-out;
 }
 
 .nav-btn {
-    transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-btn:hover {
-    width: 100px;
-    content: "Home";
+  width: 100px;
+  content: "Home";
 }
 
 .nav-btn-icon {
-    translate: 4px 0px;
-    transition: all .2s ease-in-out;
+  translate: 4px 0px;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-btn-icon:hover {
-    translate: 0px 0px;
+  translate: 0px 0px;
 }
-
-/* #theme-button {
-
-} */
-
-/* #content-wrapper {
-    width: 97vw;
-    height: 97vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: var(--rounded-box);
-    backdrop-filter: blur(50px);
-} */

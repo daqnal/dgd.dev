@@ -1,27 +1,51 @@
 ---
 import { SITE_TITLE } from "../consts.ts";
-import Layout from '../layouts/Layout.astro';
-
-
+import Layout from "../layouts/Layout.astro";
+import Arrow from "../components/Arrow.jsx"
+import Landing from "../components/embedded-pages/Landing.astro";
 ---
 
 <Layout title={SITE_TITLE}>
-	<main>
-		<h1 class="text-8xl mt-12 mix-blend-difference">Daniel Durling</h1>
-		<div class="w-72">
-			<img src="/images/me.webp" alt="Portrait photo of me" class="rounded-box">
-		</div>
-		
-	</main>
+    <div id="main-content-container">
+        <div class="arrow-btn-container">
+            <Arrow orientation="up" />
+        </div>
+
+        <div id="pages-container">
+            <Landing />
+        </div>
+
+        <div class="arrow-btn-container">
+            <Arrow orientation="down" />
+        </div>
+    </div>
+
+
+
 </Layout>
 
 
 <style>
-	main {
-		position: absolute;
+
+	#main-content-container {
+	   z-index: 0;
+	   max-height: calc(100% - 48px);
+	    width: 100%;
+	    height: 100%;
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
 	}
 
-	h1 {
-		width: 100%;
+	#pages-container {
+	    flex-grow: 1;
+	}
+
+	.arrow-btn-container {
+	    width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 12px;
+		margin-bottom: 12px;
 	}
 </style>
