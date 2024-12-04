@@ -9,15 +9,6 @@
   backdrop-filter: blur(50px);
 }
 
-.btn {
-  border-radius: var(--rounded-badge);
-}
-
-.icon {
-  width: 16px;
-  height: 16px;
-}
-
 #mini-nav-logo {
   width: 24px;
   height: 24px;
@@ -36,31 +27,4 @@
   100% {
     font-size: 100%;
   }
-}
-
-.nav-btn-text {
-  font-size: 0%;
-}
-
-.nav-btn:hover > .nav-btn-text {
-  font-size: 100%;
-  animation: text-appear 0.2s ease-in-out;
-}
-
-.nav-btn {
-  transition: all 0.2s ease-in-out;
-}
-
-.nav-btn:hover {
-  width: 100px;
-  content: "Home";
-}
-
-.nav-btn-icon {
-  translate: 4px 0px;
-  transition: all 0.2s ease-in-out;
-}
-
-.nav-btn-icon:hover {
-  translate: 0px 0px;
 }

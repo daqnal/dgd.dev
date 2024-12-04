@@ -2,39 +2,35 @@ import { useState } from "react";
 import { SITE_TITLE } from "../consts.ts";
 import "./Nav.css";
 import { SITE_DOMAIN } from "../consts.ts";
-import { Palette, Home, Newspaper, User } from "lucide-react";
+import {
+  Palette,
+  Home,
+  Newspaper,
+  User,
+  Presentation,
+  BrainCircuit,
+  Link2,
+} from "lucide-react";
+import NavButton from "./NavButton.jsx";
 
 export default function Nav() {
   return (
     <div id="nav" className="bg-base-200/70 p-2">
       <span>
-        <a href="/" className="btn btn-sm btn-ghost pl-1 pr-2">
+        <button className="btn btn-sm btn-ghost pl-1 pr-2">
           <img src="/images/logo.webp" alt="logo" id="mini-nav-logo" />
           {SITE_TITLE}
-        </a>
+        </button>
       </span>
 
       <div id="nav-btn-container" className="flex">
-        <div>
-          <a href="/" className="btn btn-sm btn-circle nav-btn">
-            <Home className="icon nav-btn-icon" />
-            <span className="nav-btn-text">Home</span>
-          </a>
-        </div>
+        <NavButton text="Landing" component={Home} classes="mr-1" />
+        <NavButton text="Projects" component={Presentation} classes="mr-1" />
+        <NavButton text="Skills" component={BrainCircuit} classes="mr-1" />
+        <NavButton text="About" component={User} classes="mr-1" />
+        <NavButton text="Links" component={Link2} />
 
-        <div>
-          <a href="/" className="btn btn-sm btn-circle ml-1 nav-btn">
-            <Newspaper className="icon nav-btn-icon" />
-            <span className="nav-btn-text">Posts</span>
-          </a>
-        </div>
-
-        <div>
-          <a href="/" className="btn btn-sm btn-circle ml-1 nav-btn">
-            <User className="icon nav-btn-icon" />
-            <span className="nav-btn-text">About</span>
-          </a>
-        </div>
+        {/* <NavButton text="Posts" component={Newspaper} /> */}
 
         <ThemeSwitcher />
       </div>
