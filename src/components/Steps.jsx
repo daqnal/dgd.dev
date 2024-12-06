@@ -60,7 +60,7 @@ export default function Steps() {
 
 function StepButton({ icon: Icon, text }) {
   return (
-    <div className="tooltip tooltip-left" data-tip={text}>
+    <div>
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
