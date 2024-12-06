@@ -10,6 +10,7 @@ import {
   Presentation,
   BrainCircuit,
   Link2,
+  CodeXml,
 } from "lucide-react";
 import NavButton from "./NavButton.jsx";
 
@@ -28,7 +29,8 @@ export default function Nav() {
         <NavButton text="Projects" component={Presentation} classes="mr-1" />
         <NavButton text="Skills" component={BrainCircuit} classes="mr-1" />
         <NavButton text="About" component={User} classes="mr-1" />
-        <NavButton text="Links" component={Link2} />
+        <NavButton text="Links" component={Link2} classes="mr-1" />
+        <NavButton text="Site Info" component={CodeXml} />
 
         {/* <NavButton text="Posts" component={Newspaper} /> */}
 

@@ -1,0 +1,18 @@
+#steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress-svg {
+  position: absolute;
+  z-index: -1;
+}
+
+#progress-line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
