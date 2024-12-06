@@ -8,8 +8,15 @@ export default function Arrow(props) {
     arrowIcon = <ChevronDown />;
   }
 
+  function handleClick() {
+    props.onDataReceived();
+  }
+
   return (
-    <button className="btn btn-circle bg-base-200/70 border-none">
+    <button
+      onClick={handleClick}
+      className="btn btn-circle bg-base-200/70 border-none"
+    >
       {arrowIcon}
     </button>
   );
