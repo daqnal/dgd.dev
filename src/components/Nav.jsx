@@ -2,16 +2,7 @@ import { useState } from "react";
 import { SITE_TITLE } from "../consts.ts";
 import "./Nav.css";
 import { SITE_DOMAIN } from "../consts.ts";
-import {
-  Palette,
-  Home,
-  Newspaper,
-  User,
-  Presentation,
-  BrainCircuit,
-  Link2,
-  CodeXml,
-} from "lucide-react";
+import { Palette, Home, Newspaper } from "lucide-react";
 import NavButton from "./NavButton.jsx";
 
 export default function Nav() {
@@ -26,13 +17,7 @@ export default function Nav() {
 
       <div id="nav-btn-container" className="flex">
         <NavButton text="Landing" component={Home} classes="mr-1" />
-        <NavButton text="Projects" component={Presentation} classes="mr-1" />
-        <NavButton text="Skills" component={BrainCircuit} classes="mr-1" />
-        <NavButton text="About" component={User} classes="mr-1" />
-        <NavButton text="Links" component={Link2} classes="mr-1" />
-        <NavButton text="Site Info" component={CodeXml} />
-
-        {/* <NavButton text="Posts" component={Newspaper} /> */}
+        <NavButton text="Posts" component={Newspaper} />
 
         <ThemeSwitcher />
       </div>

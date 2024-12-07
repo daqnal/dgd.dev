@@ -6,13 +6,27 @@
   align-items: center;
 }
 
-#progress-svg {
+.progress-svg {
   position: absolute;
+}
+
+.progress-line {
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+#animated-progress-svg {
   z-index: -1;
 }
 
-#progress-line {
+#animated-progress-line {
   stroke-width: 10px;
-  stroke-linecap: round;
-  fill: transparent;
+}
+
+#static-progress-svg {
+  z-index: -2;
+}
+
+#static-progress-line {
+  stroke-width: 20px;
 }
