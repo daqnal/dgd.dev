@@ -1,6 +1,6 @@
-import "./Landing.css";
+import "./FirstGlance.css";
 
-export default function Landing() {
+export default function FirstGlance() {
   return (
     <div id="col-container">
       <div id="left-container">
