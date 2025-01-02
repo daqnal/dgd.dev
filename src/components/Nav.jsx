@@ -92,8 +92,8 @@ function ThemeSwitcher() {
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start mx-0 my-1"
-            aria-label="Nord"
-            value="nord"
+            aria-label="Pastel"
+            value="pastel"
           />
         </li>
       </ul>

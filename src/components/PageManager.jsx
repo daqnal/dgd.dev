@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 
 import "./PageManager.css";
 // import Steps from "./Steps.jsx";
@@ -21,7 +20,8 @@ import Links from "./embedded-pages/Links.jsx";
 import Info from "./embedded-pages/Info.jsx";
 
 export default function PageManager() {
-  const [page, setPage] = useState(FirstGlance);
+  // const [page, setPage] = useState(FirstGlance);
+  const [page, setPage] = useState(Projects);
   const [percentage, setPercentage] = useState(0);
 
   const draw = {
@@ -42,19 +42,13 @@ export default function PageManager() {
 
   return (
     <div id="content-steps-container">
-      <div id="main-content-container">
-        <motion.div
-          id="pages-container"
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-        >
-          {page}
-        </motion.div>
+      <div id="main-content-container" className="motion-preset-expand">
+        {page}
       </div>
 
       <div id="steps-outer-container">
         <div id="steps-inner-container">
-          <motion.svg
+          <svg
             id="animated-progress-svg"
             className="progress-svg"
             width="48"
@@ -63,7 +57,7 @@ export default function PageManager() {
             initial="hidden"
             animate="visible"
           >
-            <motion.line
+            <line
               id="animated-progress-line"
               className="progress-line"
               x1="24"
@@ -75,7 +69,7 @@ export default function PageManager() {
               variants={draw}
               custom={2}
             />
-          </motion.svg>
+          </svg>
 
           <svg
             id="static-progress-svg"
@@ -163,14 +157,14 @@ function StepButton({
 
   return (
     <div>
-      <motion.button
+      <button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="btn btn-circle"
         onClick={handleClick}
       >
         <Icon />
-      </motion.button>
+      </button>
     </div>
   );
 }
