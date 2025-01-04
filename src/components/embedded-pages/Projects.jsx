@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./Projects.css";
 
-export default function Projects() {
+export default function Projects({
+  activeIndex = 0,
+  setActiveIndex = () => {},
+}) {
   // const [project, setProject] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div id="projects-container" className="bg-base-100/50 rounded-box">

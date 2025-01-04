@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import "./PageManager.css";
-// import Steps from "./Steps.jsx";
 
 import {
   Smile,
@@ -21,7 +20,16 @@ import Info from "./embedded-pages/Info.jsx";
 
 export default function PageManager() {
   // const [page, setPage] = useState(FirstGlance);
-  const [page, setPage] = useState(Projects);
+  const [activeProjectIndex, setProjectActiveIndex] = useState(0);
+
+  const projectsPage = (
+    <Projects
+      activeIndex={activeProjectIndex}
+      setActiveIndex={setProjectActiveIndex}
+    />
+  );
+
+  const [page, setPage] = useState(projectsPage);
   const [percentage, setPercentage] = useState(0);
 
   const draw = {
@@ -43,7 +51,7 @@ export default function PageManager() {
   return (
     <div id="content-steps-container">
       <div id="main-content-container" className="motion-preset-expand">
-        {page}
+        {page === projectsPage ? projectsPage : page}
       </div>
 
       <div id="steps-outer-container">
