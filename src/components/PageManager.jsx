@@ -19,17 +19,16 @@ import Links from "./embedded-pages/Links.jsx";
 import Info from "./embedded-pages/Info.jsx";
 
 export default function PageManager() {
-  // const [page, setPage] = useState(FirstGlance);
-  const [activeProjectIndex, setProjectActiveIndex] = useState(0);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
 
   const projectsPage = (
     <Projects
-      activeIndex={activeProjectIndex}
-      setActiveIndex={setProjectActiveIndex}
+      activeProjectIndex={activeProjectIndex}
+      setActiveProjectIndex={setActiveProjectIndex}
     />
   );
 
-  const [page, setPage] = useState(projectsPage);
+  const [page, setPage] = useState("Projects");
   const [percentage, setPercentage] = useState(0);
 
   const draw = {
@@ -48,10 +47,26 @@ export default function PageManager() {
     },
   };
 
+  // return (
+  //   <Projects
+  //     activeProjectIndex={activeProjectIndex}
+  //     setActiveProjectIndex={setActiveProjectIndex}
+  //   />
+  // );
+  //
+  // return (
+  //   <div id="content-steps-container">
+  //     <div id="main-content-container" className="motion-preset-expand">
+  //       {page === "Projects" ? projectsPage : page}
+  //       {/* {projectsPage} */}
+  //     </div>
+  //   </div>
+  // );
+
   return (
     <div id="content-steps-container">
       <div id="main-content-container" className="motion-preset-expand">
-        {page === projectsPage ? projectsPage : page}
+        {page === "Projects" ? projectsPage : page}
       </div>
 
       <div id="steps-outer-container">
@@ -106,7 +121,7 @@ export default function PageManager() {
             progress={0}
           />
           <StepButton
-            onChangePage={() => setPage(Projects)}
+            onChangePage={() => setPage("Projects")}
             percentage={percentage}
             onChangePercentage={() => setPercentage(0.2)}
             text="Projects"

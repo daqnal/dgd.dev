@@ -2,24 +2,29 @@ import { useState } from "react";
 import "./Projects.css";
 
 export default function Projects({
-  activeIndex = 0,
-  setActiveIndex = () => {},
+  activeProjectIndex = 0,
+  setActiveProjectIndex = () => {},
 }) {
   // const [project, setProject] = useState(0);
 
   return (
     <div id="projects-container" className="bg-base-100/50 rounded-box">
       <div id="projects-col-1">
-        <ButtonList activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+        <ButtonList
+          activeProjectIndex={activeProjectIndex}
+          setActiveProjectIndex={setActiveProjectIndex}
+        />
       </div>
       <div id="projects-col-2">hi</div>
     </div>
   );
 }
 
-function ButtonList({ activeIndex, setActiveIndex }) {
+function ButtonList({ activeProjectIndex, setActiveProjectIndex }) {
   function handleClick(index) {
-    setActiveIndex(index);
+    if (activeProjectIndex !== index) {
+      setActiveProjectIndex(index);
+    }
   }
 
   return (
@@ -31,11 +36,12 @@ function ButtonList({ activeIndex, setActiveIndex }) {
         "Minisite Template",
         "rat",
       ].map((label, index) => (
-        <li>
+        <li key={index}>
           <button
-            key={index}
             onClick={() => handleClick(index)}
-            className={activeIndex === index ? "btn btn-disabled" : "btn"}
+            className={
+              activeProjectIndex === index ? "btn btn-disabled" : "btn"
+            }
           >
             {label}
           </button>
