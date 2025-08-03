@@ -45,6 +45,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-.nav-btn-icon:hover {
+.nav-btn:hover > .nav-btn-icon {
   translate: 0px 0px;
 }
