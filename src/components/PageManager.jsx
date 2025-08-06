@@ -19,13 +19,10 @@ import Links from "./embedded-pages/Links.jsx";
 import Info from "./embedded-pages/Info.jsx";
 
 export default function PageManager() {
-  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  
 
   const projectsPage = (
-    <Projects
-      activeProjectIndex={activeProjectIndex}
-      setActiveProjectIndex={setActiveProjectIndex}
-    />
+    <Projects/>
   );
 
   const [page, setPage] = useState("Projects");
@@ -46,22 +43,6 @@ export default function PageManager() {
       };
     },
   };
-
-  // return (
-  //   <Projects
-  //     activeProjectIndex={activeProjectIndex}
-  //     setActiveProjectIndex={setActiveProjectIndex}
-  //   />
-  // );
-  //
-  // return (
-  //   <div id="content-steps-container">
-  //     <div id="main-content-container" className="motion-preset-expand">
-  //       {page === "Projects" ? projectsPage : page}
-  //       {/* {projectsPage} */}
-  //     </div>
-  //   </div>
-  // );
 
   return (
     <div id="content-steps-container">

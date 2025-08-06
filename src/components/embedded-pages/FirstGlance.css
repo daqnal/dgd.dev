@@ -13,7 +13,7 @@
 }
 
 #left-container {
-  padding-left: 100px;
+  padding: 0 auto;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
