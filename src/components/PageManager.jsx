@@ -29,7 +29,7 @@ export default function PageManager() {
     { component: Info, label: "Site Info", icon: CodeXml, progress: 1 },
   ];
 
-  const [pageIndex, setPageIndex] = useState(1);
+  const [pageIndex, setPageIndex] = useState(2);
   const [percentage, setPercentage] = useState(0);
 
   const ActiveComponent = pages[pageIndex].component;

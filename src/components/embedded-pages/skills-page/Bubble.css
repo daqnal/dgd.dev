@@ -1,0 +1,17 @@
+.bubble {
+    width: 128px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon {
+    width: 48px;
+}
+
+.skill-name {
+    font-size: small;
+    max-width: 80%;
+}
