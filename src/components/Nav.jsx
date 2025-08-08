@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { SITE_TITLE } from "../consts.ts";
 import "./Nav.css";
-import { SITE_DOMAIN } from "../consts.ts";
 import { Palette, Home, Newspaper } from "lucide-react";
 import NavButton from "./NavButton.jsx";
 

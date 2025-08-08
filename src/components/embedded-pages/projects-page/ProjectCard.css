@@ -1,0 +1,23 @@
+.project-card {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.project-img {
+    max-width: 40vh;
+}
+
+.project-desc {
+    width: 90%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.link-button-icon {
+    width: 1.2em;
+}

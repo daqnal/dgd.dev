@@ -1,8 +1,6 @@
 # dgd.dev v2
 
-## Rewrite of personal site
-
-### New stack:
+## New stack:
 
 - Astro
 - React
@@ -10,7 +8,3 @@
 - daisyui
 - theme-change
 - motion
-
----
-
-CSS stacking contexts: https://www.joshwcomeau.com/css/stacking-contexts/

@@ -25,14 +25,13 @@
 }
 
 #portrait {
-  width: 400px;
-  height: 600px;
+  width: 80%;
   border: 10px solid var(--fallback-b2, oklch(var(--b2) / 0.4));
 }
 .name {
   color: white;
   line-height: 1em;
-  font-size: 9em;
+  font-size: calc(3vh + 5vw);
 }
 
 #subtitle {

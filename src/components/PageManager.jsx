@@ -11,22 +11,28 @@ import {
   CodeXml,
 } from "lucide-react";
 
-import FirstGlance from "./embedded-pages/FirstGlance.jsx";
-import Projects from "./embedded-pages/Projects.jsx";
-import Skills from "./embedded-pages/Skills.jsx";
-import About from "./embedded-pages/About.jsx";
-import Links from "./embedded-pages/Links.jsx";
-import Info from "./embedded-pages/Info.jsx";
+import FirstGlance from "./embedded-pages/first-glance-page/FirstGlance.jsx";
+import Projects from "./embedded-pages/projects-page/Projects.jsx";
+import Skills from "./embedded-pages/skills-page/Skills.jsx";
+import About from "./embedded-pages/about-page/About.jsx";
+import Links from "./embedded-pages/links-page/Links.jsx";
+import Info from "./embedded-pages/info-page/Info.jsx";
 
 export default function PageManager() {
-  
 
-  const projectsPage = (
-    <Projects/>
-  );
+  const pages = [
+    { component: FirstGlance, label: "First Glance", icon: Smile, progress: 0 },
+    { component: Projects, label: "Projects", icon: Presentation, progress: 0.2 },
+    { component: Skills, label: "Skills", icon: BrainCircuit, progress: 0.4 },
+    { component: About, label: "About", icon: User, progress: 0.6 },
+    { component: Links, label: "Links", icon: Link2, progress: 0.8 },
+    { component: Info, label: "Site Info", icon: CodeXml, progress: 1 },
+  ];
 
-  const [page, setPage] = useState("Projects");
+  const [pageIndex, setPageIndex] = useState(1);
   const [percentage, setPercentage] = useState(0);
+
+  const ActiveComponent = pages[pageIndex].component;
 
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -47,7 +53,7 @@ export default function PageManager() {
   return (
     <div id="content-steps-container">
       <div id="main-content-container" className="motion-preset-expand">
-        {page === "Projects" ? projectsPage : page}
+        <ActiveComponent />
       </div>
 
       <div id="steps-outer-container">
@@ -68,7 +74,6 @@ export default function PageManager() {
               y1="30"
               x2="24"
               y2={`${30 + percentage * 340}`}
-              // y2={`${30 + (percentage / 100) * 340}`}
               stroke="white"
               variants={draw}
               custom={2}
@@ -93,54 +98,17 @@ export default function PageManager() {
             />
           </svg>
 
-          <StepButton
-            onChangePage={() => setPage(FirstGlance)}
-            percentage={percentage}
-            onChangePercentage={() => setPercentage(0)}
-            text="First Glance"
-            icon={Smile}
-            progress={0}
-          />
-          <StepButton
-            onChangePage={() => setPage("Projects")}
-            percentage={percentage}
-            onChangePercentage={() => setPercentage(0.2)}
-            text="Projects"
-            icon={Presentation}
-            progress={1 / 5}
-          />
-          <StepButton
-            onChangePage={() => setPage(Skills)}
-            percentage={percentage}
-            onChangePercentage={() => setPercentage(0.4)}
-            text="Skills"
-            icon={BrainCircuit}
-            progress={2 / 5}
-          />
-          <StepButton
-            onChangePage={() => setPage(About)}
-            percentage={percentage}
-            onChangePercentage={() => setPercentage(0.6)}
-            text="About"
-            icon={User}
-            progress={3 / 5}
-          />
-          <StepButton
-            onChangePage={() => setPage(Links)}
-            percentage={percentage}
-            onChangePercentage={() => setPercentage(0.8)}
-            text="Links"
-            icon={Link2}
-            progress={4 / 5}
-          />
-          <StepButton
-            onChangePage={() => setPage(Info)}
-            percentage={percentage}
-            onChangePercentage={() => setPercentage(1)}
-            text="Site Info"
-            icon={CodeXml}
-            progress={5 / 5}
-          />
+          {pages.map(({ label, icon, progress }, index) => (
+            <StepButton
+              key={index}
+              onChangePage={() => setPageIndex(index)}
+              percentage={percentage}
+              onChangePercentage={() => setPercentage(progress)}
+              text={label}
+              icon={icon}
+              progress={progress}
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -49,6 +49,7 @@
 }
 
 #animated-progress-line {
+  stroke: oklch(var(--bc));
   stroke-width: 5px;
 }
 
@@ -57,5 +58,6 @@
 }
 
 #static-progress-line {
+  stroke: oklch(var(--b2));
   stroke-width: 13px;
 }
