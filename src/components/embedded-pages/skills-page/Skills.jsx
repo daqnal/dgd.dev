@@ -1,4 +1,3 @@
-import Bubble from "./Bubble.jsx";
 import "./Skills.css";
 
 export default function Skills() {
@@ -62,7 +61,7 @@ export default function Skills() {
         }, 
         {
           name: "Vim/Neovim", 
-          desc: "Powerful keyboard-based text editor extended as an IDE", 
+          desc: "Powerful keyboard-based text editor extendable to be an IDE", 
           iconPath: "/images/skill-icons/nvim.svg"
         }
       ]
@@ -70,14 +69,22 @@ export default function Skills() {
   ];
 
   return (
-    <div className="skills-container">
+    <div className="bg-base-100/50 rounded-box w-full h-full flex justify-evenly p-4">
       {skills.map(({skilltype, data}, index) => (
-        <div className="skilltype-container">
-          <span className="skilltype">{skilltype}</span>
+        <div className="w-full text-center">
+          <div className="mb-4">
+            <span className="">{skilltype}</span>
+          </div>
 
-          {skills[index].data.map(({name, desc, iconPath}, index) => (
-            <Bubble name={name} desc={desc} iconPath={iconPath}/>
-          ))}
+          <div className="marquee">
+            {skills[index].data.map(({name, desc, iconPath}, index) => (
+              <div className="flex flex-col place-items-center marquee-content">
+                <img src={iconPath} alt={`${name} logo`} className="w-16 h-16" />
+                <span>{name}</span>
+              </div>
+            ))}
+          </div>
+          
         </div>
       ))}
     </div>

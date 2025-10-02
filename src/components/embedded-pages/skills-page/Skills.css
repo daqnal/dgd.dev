@@ -1,17 +1,40 @@
-.skills-container {
+.marquee {
+    width: auto;
+    max-width: 96vw;
     height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
+    margin: 3vh 0;
 
-.skilltype-container {
+    /* transform: skew(0, -4deg); */
+    /* background-color: #1a1b26; */
+
+    --gap: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+}
+  
+.marquee-content {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: normal;
+
+    list-style-type: none;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 25s linear infinite;
 }
 
-.skilltype {
-    font-size: large;
+@keyframes scroll {
+    from {
+      transform: translateY(500%);
+    }
+    to {
+      transform: translateY(calc(-500% - var(--gap)));
+    }
 }
