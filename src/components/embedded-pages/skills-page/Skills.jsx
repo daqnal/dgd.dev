@@ -15,6 +15,17 @@ export default function Skills() {
           name: "JavaScript", 
           desc: "Popular language used for web development", 
           iconPath: "/images/skill-icons/js.svg"
+        },
+        {
+          name: "Java",
+          desc: "Influential",
+          iconPath: "/images/skill-icons/java.svg"
+        },
+        {
+          name: "Lua",
+          desc: "Brazil",
+          iconPath: "/images/skill-icons/lua.svg",
+          extraClasses: "invert"
         }
       ]
     },
@@ -24,7 +35,33 @@ export default function Skills() {
         name: "React", 
         desc: "JavaScript framework used for building responsive web applications", 
         iconPath: "/images/skill-icons/react.svg"
-      }]
+      },
+      {
+        name: "Astro",
+        desc: "Web meta-framework for blogging and publishing content",
+        iconPath: "/images/skill-icons/astro.svg"
+      },
+      {
+        name: "TailwindCSS",
+        desc: "CSS framework that utilizes utility classes for quick styling",
+        iconPath: "/images/skill-icons/tailwind.svg"
+      },
+      {
+        name: "Streamlit",
+        desc: "CSS framework that utilizes utility classes for quick styling",
+        iconPath: "/images/skill-icons/streamlit.svg"
+      },
+      {
+        name: "daisyUI",
+        desc: "CSS framework that utilizes utility classes for quick styling",
+        iconPath: "/images/skill-icons/daisyui.svg"
+      },
+      {
+        name: "Hugo",
+        desc: "CSS framework that utilizes utility classes for quick styling",
+        iconPath: "/images/skill-icons/hugo.svg"
+      },
+    ]
     },
     {
       skilltype: "Operating Systems", 
@@ -62,29 +99,38 @@ export default function Skills() {
         {
           name: "Vim/Neovim", 
           desc: "Powerful keyboard-based text editor extendable to be an IDE", 
-          iconPath: "/images/skill-icons/nvim.svg"
+          iconPath: "/images/skill-icons/vim.svg"
+        },
+        {
+          name: "DaVinci Resolve",
+          desc: "",
+          iconPath: "/images/skill-icons/resolve.svg"
+        },
+        {
+          name: "Obsidian",
+          desc: "",
+          iconPath: "/images/skill-icons/obsidian.svg"
         }
       ]
     },
   ];
 
   return (
-    <div className="bg-base-100/50 rounded-box w-full h-full flex justify-evenly p-4">
+    <div className="bg-base-100/50 rounded-box w-full h-full flex justify-evenly">
       {skills.map(({skilltype, data}, index) => (
-        <div className="w-full text-center">
-          <div className="mb-4">
-            <span className="">{skilltype}</span>
+        <div className="w-full text-center flex flex-col gap-4 pt-4">
+          <div className="h-12 flex place-items-center place-content-center">
+            <span className="font-bold">{skilltype}</span>
           </div>
 
-          <div className="marquee">
-            {skills[index].data.map(({name, desc, iconPath}, index) => (
-              <div className="flex flex-col place-items-center marquee-content">
-                <img src={iconPath} alt={`${name} logo`} className="w-16 h-16" />
+          <div className="marquee flex-1">
+            {skills[index].data.map(({name, desc, iconPath, extraClasses}, index) => (
+              <div className="flex flex-col place-items-center marquee-content w-full">
+                <img src={iconPath} alt={`${name} logo`} className={`w-16 h-16 mb-2 grayscale ${extraClasses}`} />
                 <span>{name}</span>
               </div>
             ))}
           </div>
-          
         </div>
       ))}
     </div>

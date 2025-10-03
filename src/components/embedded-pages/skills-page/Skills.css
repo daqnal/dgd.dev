@@ -1,12 +1,4 @@
 .marquee {
-    width: auto;
-    max-width: 96vw;
-    height: 100%;
-    margin: 3vh 0;
-
-    /* transform: skew(0, -4deg); */
-    /* background-color: #1a1b26; */
-
     --gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -17,16 +9,11 @@
 }
   
 .marquee-content {
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: normal;
-
     list-style-type: none;
     flex-shrink: 0;
     display: flex;
     justify-content: space-around;
     min-width: 100%;
-    gap: var(--gap);
     animation: scroll 25s linear infinite;
 }
 
@@ -37,4 +24,8 @@
     to {
       transform: translateY(calc(-500% - var(--gap)));
     }
+}
+
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
 }
