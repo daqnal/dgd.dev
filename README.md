@@ -1,10 +1,5 @@
-# dgd.dev v2
+# dgd.dev
 
-## New stack:
-
-- Astro
-- React
-- Tailwind
-- daisyui
-- theme-change
-- motion
+## Stack
+- Svelte
+-
