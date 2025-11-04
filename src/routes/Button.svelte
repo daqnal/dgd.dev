@@ -2,7 +2,7 @@
     let p = $props();
 </script>
 
-<button>
+<button onclick={p.onclick}>
     {p.id}
 </button>
 

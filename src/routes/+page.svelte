@@ -6,17 +6,23 @@
 
     let components = [One, Two, Three];
 
-    let Component = $state(One);
+    let currentComponentIdx = $state(0);
+
+    function handleClick(index) {
+        currentComponentIdx = index;
+    }
 </script>
 
 <div class="main">
     <div class="content">
-        <Component />
+        {#each [components[currentComponentIdx]] as Comp}
+            <Comp />
+        {/each}
     </div>
     <div class="buttons-container">
-        <Button id={1} />
-        <Button id={2} />
-        <Button id={3} />
+        <Button id={1} onclick={() => handleClick(0)} />
+        <Button id={2} onclick={() => handleClick(1)} />
+        <Button id={3} onclick={() => handleClick(2)} />
     </div>
 </div>
 
