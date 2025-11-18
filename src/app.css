@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: emerald --default, night --prefersdark;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}

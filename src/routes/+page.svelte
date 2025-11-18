@@ -1,46 +1,63 @@
 <script>
-    import Button from "./Button.svelte";
-    import One from "./One.svelte";
-    import Two from "./Two.svelte";
-    import Three from "./Three.svelte";
+  import PageButton from "./PageButton.svelte";
+  import FirstGlance from "./FirstGlance.svelte";
+  import Projects from "./Projects.svelte";
+  import Skills from "./Skills.svelte";
+  import About from "./About.svelte";
+  import Links from "./Links.svelte";
 
-    let components = [One, Two, Three];
+  import {
+    BrainCircuit,
+    CircleUser,
+    Link2,
+    Presentation,
+    ScrollText,
+  } from "@lucide/svelte";
 
-    let currentComponentIdx = $state(0);
+  let components = [
+    { comp: FirstGlance, icon: CircleUser },
+    { comp: Projects, icon: Presentation },
+    { comp: Skills, icon: BrainCircuit },
+    { comp: About, icon: ScrollText },
+    { comp: Links, icon: Link2 },
+  ];
 
-    function handleClick(index) {
-        currentComponentIdx = index;
-    }
+  let currentComponentIdx = $state(0);
+
+  function handleClick(index) {
+    currentComponentIdx = index;
+  }
 </script>
 
-<div class="main">
-    <div class="content">
-        {#each [components[currentComponentIdx]] as Comp}
-            <Comp />
-        {/each}
-    </div>
-    <div class="buttons-container">
-        <Button id={1} onclick={() => handleClick(0)} />
-        <Button id={2} onclick={() => handleClick(1)} />
-        <Button id={3} onclick={() => handleClick(2)} />
-    </div>
+<div class="flex h-full">
+  <div class="grow p-4">
+    {#each [components[currentComponentIdx].comp] as Comp}
+      <Comp />
+    {/each}
+  </div>
+  <div class="flex flex-col place-content-center gap-4 grow-0 px-4">
+    {#each [components] as btn}
+      <PageButton icon={btn.icon} />
+    {/each}
+  </div>
 </div>
 
-<style>
-    .main {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
-    .buttons-container {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        align-items: end;
-        justify-content: center;
-        gap: 25px;
-    }
-    .content {
-        flex-grow: 1;
-    }
-</style>
+<!-- <style> -->
+<!--   .main { -->
+<!--     display: flex; -->
+<!--     width: 100%; -->
+<!--     height: 100%; -->
+<!--   } -->
+<!--   .buttons-container { -->
+<!--     display: flex; -->
+<!--     flex-direction: column; -->
+<!--     flex-grow: 0; -->
+<!--     justify-content: center; -->
+<!--     gap: 25px; -->
+<!--     padding-left: 25px; -->
+<!--     padding-right: 25px; -->
+<!--   } -->
+<!--   .content-container { -->
+<!--     flex-grow: 1; -->
+<!--   } -->
+<!-- </style> -->
