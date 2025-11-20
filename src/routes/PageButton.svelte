@@ -1,7 +1,13 @@
 <script>
-  let p = $props();
+  let { title, icon: Icon, active = false, onclick } = $props();
 </script>
 
-<button onclick={p.onclick} class="btn btn-circle text-xl w-[5vw] h-[5vw]">
-  {p.icon}
+<button
+  {onclick}
+  class="btn btn-circle tooltip tooltip-left text-xl w-[5vw] h-[5vw] {active
+    ? 'btn-primary'
+    : ''}"
+  data-tip={title}
+>
+  <Icon />
 </button>
