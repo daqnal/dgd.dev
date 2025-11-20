@@ -28,21 +28,20 @@
 
   function handleClick(index) {
     compIdx = index;
-    console.log(scrollY);
   }
 
   // Switches pages up or down on scroll
-  $effect(() => {
-    function handler(e) {
-      if (Math.abs(e.deltaY) < 40) return;
-      compIdx = Math.max(
-        0,
-        Math.min(components.length - 1, compIdx + (e.deltaY > 0 ? 1 : -1)),
-      );
-    }
-    window.addEventListener("wheel", handler);
-    return () => window.removeEventListener("wheel", handler);
-  });
+  // $effect(() => {
+  //   function handler(e) {
+  //     if (Math.abs(e.deltaY) < 40) return;
+  //     compIdx = Math.max(
+  //       0,
+  //       Math.min(components.length - 1, compIdx + (e.deltaY > 0 ? 1 : -1)),
+  //     );
+  //   }
+  //   window.addEventListener("wheel", handler);
+  //   return () => window.removeEventListener("wheel", handler);
+  // });
 </script>
 
 <div class="flex h-full">
