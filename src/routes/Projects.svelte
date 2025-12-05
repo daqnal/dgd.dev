@@ -1,10 +1,10 @@
-<script lang="ts">
+<script>
   import { projects } from "./projects";
   import ProjectDisplay from "./ProjectDisplay.svelte";
 
-  let projIndex = $state(0);
+  let projIndex = $state(1);
 
-  function handleClick(i: number) {
+  function handleClick(i) {
     projIndex = i;
   }
 </script>
