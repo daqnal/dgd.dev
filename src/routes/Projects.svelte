@@ -2,7 +2,7 @@
   import { projects } from "./projects";
   import ProjectDisplay from "./ProjectDisplay.svelte";
 
-  let projIndex = $state(1);
+  let projIndex = $state(0);
 
   function handleClick(i) {
     projIndex = i;

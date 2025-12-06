@@ -24,7 +24,7 @@
     { title: "Links & Contact", comp: Links, icon: Link2 },
   ];
 
-  let compIdx = $state(1);
+  let compIdx = $state(0);
 
   function handleClick(index) {
     compIdx = index;
