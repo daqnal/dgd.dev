@@ -1,9 +1,10 @@
-import { Instagram, Rat, Waves } from "@lucide/svelte"
+import { Instagram, Rat, Waves, CircleUserRound } from "@lucide/svelte"
 
 // Import MD files for the projects
 import ratmd from "$lib/md/projects/rat.md?raw";
 import fsmd from "$lib/md/projects/flowysurf.md?raw";
 import ggmd from "$lib/md/projects/grabagram.md?raw";
+import msmd from "$lib/md/projects/minisite.md?raw";
 
 
 interface Project {
@@ -41,4 +42,13 @@ export const projects: Project[] = [
     desc: "horizontally spinning rat",
     md: ratmd,
   },
+  {
+    title: "Personal Minisite",
+    icon: CircleUserRound,
+    img: "/images/projects/minisite.png",
+    link: "https://git.dgd.sh/dan/personal-minisite-template",
+    desc: "Template to get a cusotmized static portfolio site up and runing.",
+    md: msmd,
+  }
+
 ]
