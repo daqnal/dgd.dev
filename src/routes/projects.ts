@@ -10,7 +10,7 @@ import msmd from "$lib/md/projects/minisite.md?raw";
 interface Project {
   title: string;
   icon: object;
-  img: string;
+  imgs: string[];
   link: string;
   desc: string;
   md: string;
@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     title: "grabagram",
     icon: Instagram,
-    img: "images/projects/grabagram.png",
+    imgs: ["grabagram.png"],
     link: "https://git.dgd.sh/dan/grabagram",
     desc: "Instagram reel downloader",
     md: ggmd,
@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     title: "flowysurf",
     icon: Waves,
-    img: "/images/projects/flowysurf.png",
+    imgs: ["flowysurf.png", "flowysurf2.png", "flowysurf3.png"],
     link: "https://flowy.surf",
     desc: "Flowchart project manager",
     md: fsmd,
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     title: "rat",
     icon: Rat,
-    img: "/images/projects/rat.png",
+    imgs: ["rat.png"],
     link: "https://rat.dance",
     desc: "horizontally spinning rat",
     md: ratmd,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     title: "Personal Minisite",
     icon: CircleUserRound,
-    img: "/images/projects/minisite.png",
+    imgs: ["minisite.png"],
     link: "https://git.dgd.sh/dan/personal-minisite-template",
     desc: "Template to get a cusotmized static portfolio site up and runing.",
     md: msmd,

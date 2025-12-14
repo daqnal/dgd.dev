@@ -9,14 +9,14 @@
   }
 </script>
 
-<div class="flex gap-4 w-full h-full">
-  <div class="bg-base-200 rounded-box p-4 flex flex-col">
-    <h2 class="text-xl font-bold text-center mb-4">Projects</h2>
-    <ul class="menu w-75 bg-base-100 rounded-box px-4 py-4 flex-grow gap-2">
+<div class="flex gap-2 w-full h-full">
+  <div class="w-2/9 min-w-2/9 bg-base-200 rounded-box p-2 flex flex-col">
+    <h2 class="text-xl font-bold text-center mb-2">Projects</h2>
+    <ul class="menu w-full bg-base-100 rounded-box px-2 py-2 flex-grow gap-2">
       {#each projects as { title, icon: Icon }, i}
-        <li class="flex">
+        <li class="flex w-full">
           <button
-            class="btn btn-ghost w-full {i === projIndex
+            class="btn btn-ghost w-full btn-wide {i === projIndex
               ? 'bg-primary text-primary-content'
               : ''}"
             onclick={() => handleClick(i)}
