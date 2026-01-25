@@ -1,33 +1,11 @@
-## dgd.sh
-- Font is Kanit by Google Fonts
-- Icons from [Feather](https://feathericons.com)
-- Colors taken from the [Tokyo Night theme](https://github.com/enkia/tokyo-night-vscode-theme)
-- Background idea from [this codepen](https://codepen.io/P1N2O/pen/pyBNzX)
-- Modern marquee effect from [this post](https://ryanmulligan.dev/blog/css-marquee/)
+# dgd.dev v4
 
-## Skills
+The fourth iteration of my personal portfolio website, found at [dgd.dev](https://dgd.dev).
 
-### Languages
-- Python
-- JavaScript
-- Rust*
-- TypeScript*
-- Lua
-- Bash
-- HTML
-- CSS
 
-### Technologies
-- Linux
-- TailwindCSS
-- PicoCSS*
-- Pagefind*
-- Hugo*
-- daisyUI*
-- React
-
-### Software
-- Davinci Resolve
-- Inkscape
-- Adobe Premiere Pro
-- 
+## Todo
+- Theme toggle
+- Add frontend framework
+    - Skills and projects generated from TS object
+    - Image slideshow
+    - Slick animations

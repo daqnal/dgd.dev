@@ -1,0 +1,12 @@
+---
+const { name, level } = Astro.props;
+---
+
+<div class="flex place-items-center px-[10%]">
+    <div class="flex-1 max-w-">
+        <p class="mr-4 text-right">{name}</p>
+    </div>
+    <div class="flex-1">
+        <progress class="progress" value={level} max="100"></progress>
+    </div>
+</div>

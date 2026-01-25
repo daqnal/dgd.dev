@@ -1,0 +1,20 @@
+---
+import NavButton from "./NavButton.astro";
+
+import { Smile, BrainCircuit, Presentation, Scroll, Info } from "@lucide/astro";
+---
+
+<div id="nav" class="flex place-items-center fixed right-0 h-[100vh] mr-6">
+    <!-- <progress
+        class="progress progress-primary w-56 rotate-90"
+        value={0}
+        max="100"></progress> -->
+
+    <div class="flex flex-col gap-2">
+        <NavButton elSelector="#top" name="Landing" Icon={Smile} />
+        <NavButton elSelector="#about" name="About" Icon={Scroll} />
+        <NavButton elSelector="#skills" name="Skills" Icon={BrainCircuit} />
+        <NavButton elSelector="#projects" name="Projects" Icon={Presentation} />
+        <NavButton elSelector="#info" name="Info" Icon={Info} />
+    </div>
+</div>
