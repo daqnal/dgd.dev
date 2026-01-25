@@ -1,7 +1,22 @@
 ---
 import Layout from "../layouts/main.astro";
+import About from "./sections/About.astro";
+import FirstGlance from "./sections/FirstGlance.astro";
+import Projects from "./sections/Projects.astro";
+import Skills from "./sections/Skills.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <Layout>
-	<h1>yo</h1>
+	<Nav />
+
+	<div>
+		<FirstGlance />
+
+		<Skills />
+
+		<Projects />
+
+		<About />
+	</div>
 </Layout>

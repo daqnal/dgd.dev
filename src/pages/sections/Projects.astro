@@ -1,0 +1,14 @@
+---
+import Article from "../../components/Article.astro";
+import { Content as Flowysurf } from "../../md/flowysurf.md";
+import { Content as Grabagram } from "../../md/grabagram.md";
+import { Content as Minisite } from "../../md/minisite.md";
+import { Content as Rat } from "../../md/rat.md";
+---
+
+<div id="projects">
+    <Article Markdown={Flowysurf} />
+    <Article Markdown={Grabagram} />
+    <Article Markdown={Minisite} />
+    <Article Markdown={Rat} />
+</div>
