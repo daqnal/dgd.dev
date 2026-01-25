@@ -3,9 +3,9 @@ const { elSelector, name, Icon } = Astro.props;
 ---
 
 <a href={elSelector}>
-    <div class="tooltip tooltip-left" data-tip={name}>
+    <div class="tooltip sm:tooltip-left" data-tip={name}>
         <button
-            class="btn btn-xl btn-circle hover:border-primary hover:border-3"
+            class="btn sm:btn-xl btn-circle hover:border-primary hover:border-3"
         >
             <Icon />
         </button>

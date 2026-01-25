@@ -13,10 +13,15 @@ import ProjectCard from "../../components/ProjectCard.astro";
 import { CircleUserRound, Instagram, Rat, Waves } from "@lucide/astro";
 ---
 
-<div id="projects" class="flex flex-col place-items-center my-4">
+<div
+    id="projects"
+    class="flex flex-col max-w-full place-items-center my-4 content-box"
+>
     <h2 class="text-4xl section-title">Projects</h2>
 
-    <div class="bg-base-200 w-[65ch] p-4 rounded-box flex flex-col gap-2">
+    <div
+        class="bg-base-200 w-[65ch] max-w-full p-4 rounded-box flex flex-col gap-2"
+    >
         <ProjectCard
             name="flowysurf"
             Markdown={FlowysurfMD}
