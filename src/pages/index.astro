@@ -1,22 +1,27 @@
 ---
 import Layout from "../layouts/main.astro";
 import About from "./sections/About.astro";
-import FirstGlance from "./sections/FirstGlance.astro";
 import Projects from "./sections/Projects.astro";
 import Skills from "./sections/Skills.astro";
 import Nav from "../components/Nav.astro";
+import Landing from "./sections/Landing.astro";
+import Info from "./sections/Info.astro";
 ---
 
 <Layout>
-	<Nav />
+	<div id="top" class="flex">
+		<div class="flex-grow flex flex-col">
+			<Landing />
 
-	<div>
-		<FirstGlance />
+			<About />
 
-		<Skills />
+			<Skills />
 
-		<Projects />
+			<Projects />
 
-		<About />
+			<Info />
+		</div>
+
+		<Nav />
 	</div>
 </Layout>

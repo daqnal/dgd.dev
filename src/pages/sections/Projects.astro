@@ -1,14 +1,45 @@
 ---
-import Article from "../../components/Article.astro";
-import { Content as Flowysurf } from "../../md/flowysurf.md";
-import { Content as Grabagram } from "../../md/grabagram.md";
-import { Content as Minisite } from "../../md/minisite.md";
-import { Content as Rat } from "../../md/rat.md";
+import { Content as FlowysurfMD } from "../../md/flowysurf.md";
+import { Content as GrabagramMD } from "../../md/grabagram.md";
+import { Content as MinisiteMD } from "../../md/minisite.md";
+import { Content as RatMD } from "../../md/rat.md";
+
+import flowysurfImg from "../../images/projects/flowysurf2.png";
+import grabagramImg from "../../images/projects/grabagram.png";
+import minisiteImg from "../../images/projects/minisite.png";
+import ratImg from "../../images/projects/rat.png";
+
+import ProjectCard from "../../components/ProjectCard.astro";
+import { CircleUserRound, Instagram, Rat, Waves } from "@lucide/astro";
 ---
 
-<div id="projects">
-    <Article Markdown={Flowysurf} />
-    <Article Markdown={Grabagram} />
-    <Article Markdown={Minisite} />
-    <Article Markdown={Rat} />
+<div id="projects" class="flex flex-col place-items-center my-4">
+    <h2 class="text-4xl section-title">Projects</h2>
+
+    <div class="bg-base-200 w-[65ch] p-4 rounded-box flex flex-col gap-2">
+        <ProjectCard
+            name="flowysurf"
+            Markdown={FlowysurfMD}
+            Icon={Waves}
+            projectImg={flowysurfImg}
+        />
+        <ProjectCard
+            name="Grabagram"
+            Markdown={GrabagramMD}
+            Icon={Instagram}
+            projectImg={grabagramImg}
+        />
+        <ProjectCard
+            name="rat"
+            Markdown={RatMD}
+            Icon={Rat}
+            projectImg={ratImg}
+        />
+        <ProjectCard
+            name="Personal Minisite Template"
+            Markdown={MinisiteMD}
+            Icon={CircleUserRound}
+            projectImg={minisiteImg}
+        />
+    </div>
 </div>

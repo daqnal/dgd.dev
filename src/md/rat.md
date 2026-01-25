@@ -1,4 +1,4 @@
-## Description
+
 
 The horizontally spinning rat is an internet meme entailing exactly what it advertises: a video of a 3D rat spinning horizontally with accompanying music.
 Seeing this trend while I was still learning web development, I attempted to recreate the video as a live website using raw HTML and CSS, as I didn't know JavaScript at the time.

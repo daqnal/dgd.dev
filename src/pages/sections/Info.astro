@@ -1,0 +1,9 @@
+---
+import { Content as InfoMD } from "../../md/info.md";
+import Article from "../../components/Article.astro";
+---
+
+<div id="info" class="flex flex-col place-items-center mb-[15vh]">
+    <h2 class="section-title text-4xl">Site Info</h2>
+    <Article Markdown={InfoMD} />
+</div>

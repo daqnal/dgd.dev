@@ -1,7 +1,13 @@
 ---
-const { elSelector, name } = Astro.props;
+const { elSelector, name, Icon } = Astro.props;
 ---
 
 <a href={elSelector}>
-    <button class="btn btn-lg">{name}</button>
+    <div class="tooltip tooltip-left" data-tip={name}>
+        <button
+            class="btn btn-xl btn-circle hover:border-primary hover:border-3"
+        >
+            <Icon />
+        </button>
+    </div>
 </a>

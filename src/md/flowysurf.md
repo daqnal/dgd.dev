@@ -1,4 +1,4 @@
-## Description
+🚧 Under construction 🚧
 
 
 *flowysurf* 🌊 is a visual editor for designing workflows and planning projects.
@@ -12,14 +12,26 @@ Here are the key principles behind using flowysurf:
 3. Milestones automatically count upstream Task nodes and show completion progress.
 4. TaskNodes expose a main checkbox that marks the task complete. Subtasks are local and do not count towards milestone completion.
 
+Currently, flowysurf is a frontend project, though development is underway to make it into a full stack application.
+
 ## Tech
+
+### Frontend
+
 - React
-- React Three Fiber
+- React Flow
 - TailwindCSS
 - daisyUI
 
+### Backend
+
+- Node.js
+- Prisma
+- Express.js
+- Axios
+
 ## Skills
-- Front-end web dev
+- Fullstack web dev
 - JSON data management
 
 ## Links
