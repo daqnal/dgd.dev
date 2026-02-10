@@ -3,14 +3,22 @@ import { Content as FlowysurfMD } from "../../md/flowysurf.md";
 import { Content as GrabagramMD } from "../../md/grabagram.md";
 import { Content as MinisiteMD } from "../../md/minisite.md";
 import { Content as RatMD } from "../../md/rat.md";
+import { Content as HyprlandMD } from "../../md/hyprland.md";
 
 import flowysurfImg from "../../images/projects/flowysurf2.png";
 import grabagramImg from "../../images/projects/grabagram.png";
 import minisiteImg from "../../images/projects/minisite.png";
 import ratImg from "../../images/projects/rat.png";
+import hyprlandImg from "../../images/projects/hyprland.png";
 
 import ProjectCard from "../../components/ProjectCard.astro";
-import { CircleUserRound, Instagram, Rat, Waves } from "@lucide/astro";
+import {
+    CircleUserRound,
+    Instagram,
+    Rat,
+    Waves,
+    Sparkles,
+} from "@lucide/astro";
 ---
 
 <div
@@ -45,6 +53,13 @@ import { CircleUserRound, Instagram, Rat, Waves } from "@lucide/astro";
             Markdown={MinisiteMD}
             Icon={CircleUserRound}
             projectImg={minisiteImg}
+        />
+
+        <ProjectCard
+            name="Hyprland Dotfiles"
+            Markdown={HyprlandMD}
+            Icon={Sparkles}
+            projectImg={hyprlandImg}
         />
     </div>
 </div>
