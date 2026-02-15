@@ -1,0 +1,13 @@
+<script>
+    let { elSelector, name, Icon } = $props();
+</script>
+
+<a href={elSelector}>
+    <div class="tooltip sm:tooltip-left" data-tip={name}>
+        <button
+            class="btn sm:btn-xl btn-circle hover:border-primary hover:border-3"
+        >
+            <Icon />
+        </button>
+    </div>
+</a>
