@@ -1,4 +1,9 @@
-import { Instagram, Rat, Waves, CircleUserRound, Sparkles } from "@lucide/astro";
+import { Instagram, Rat, Waves, CircleUserRound, Sparkles, type Icon as IconType } from "@lucide/astro";
+// import Rat from "@lucide/astro/icons/rat";
+// import Instagram from "@lucide/astro/icons/instagram";
+// import Waves from "@lucide/astro/icons/waves";
+// import CircleUserRound from "@lucide/astro/icons/circle-user-round";
+// import Sparkles from "@lucide/astro/icons/sparkles";
 
 import { Content as FlowysurfMD } from "./md/flowysurf.md";
 import { Content as GrabagramMD } from "./md/grabagram.md";
@@ -10,8 +15,8 @@ import { Content as HyprlandMD } from "./md/hyprland.md";
 
 interface Project {
     title: string;
-    icon: object;
-    imgs: string[];
+    images: string[];
+    icon: typeof IconType;
     link: string;
     desc: string;
     md: object;
@@ -193,7 +198,7 @@ export const projects: Project[] = [
     {
         title: "grabagram",
         icon: Instagram,
-        imgs: ["grabagram.png"],
+        images: ["grabagram.png"],
         link: "https://git.dgd.sh/dan/grabagram",
         desc: "Instagram reel downloader",
         md: GrabagramMD,
@@ -201,7 +206,7 @@ export const projects: Project[] = [
     {
         title: "flowysurf",
         icon: Waves,
-        imgs: ["flowysurf.png", "flowysurf2.png", "flowysurf3.png"],
+        images: ["flowysurf.png", "flowysurf2.png", "flowysurf3.png"],
         link: "https://flowy.surf",
         desc: "Flowchart project manager",
         md: FlowysurfMD,
@@ -209,7 +214,7 @@ export const projects: Project[] = [
     {
         title: "rat",
         icon: Rat,
-        imgs: ["rat.png"],
+        images: ["rat.gif"],
         link: "https://rat.dance",
         desc: "horizontally spinning rat",
         md: RatMD,
@@ -217,7 +222,7 @@ export const projects: Project[] = [
     {
         title: "Personal Minisite",
         icon: CircleUserRound,
-        imgs: ["minisite.png"],
+        images: ["minisite.png"],
         link: "https://git.dgd.sh/dan/personal-minisite-template",
         desc: "Template to get a cusotmized static portfolio site up and runing",
         md: MinisiteMD,
@@ -225,7 +230,7 @@ export const projects: Project[] = [
     {
         title: "Hyprland Dotfiles",
         icon: Sparkles,
-        imgs: ["hyprland.png"],
+        images: ["hyprland.png"],
         link: "https://git.dgd.sh/dan/hyprland-dotfiles",
         desc: "Config files for a beautiful Hyprland setup on Arch Linux",
         md: HyprlandMD,
