@@ -23,11 +23,6 @@
     id="nav"
     class="flex place-items-end place-content-center sm:place-items-center fixed right-0 bottom-4 sm:w-[10%] w-full h-[100vh]"
 >
-    <!-- <progress
-        class="progress progress-primary w-56 rotate-90"
-        value={0}
-        max="100"></progress> -->
-
     <div
         class="flex sm:flex-col gap-2 w-fit place-items-center bg-base-300/50 sm:bg-base-300/0 rounded-full p-2 backdrop-blur-md"
     >
