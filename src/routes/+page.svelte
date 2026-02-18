@@ -7,18 +7,20 @@
     import Skills from "./Sections/Skills.svelte";
 </script>
 
-<div class="flex flex-col items-center" id="top">
+<div class="flex flex-col items-center sm:items-start" id="top">
     <Nav />
 
-    <Landing />
+    <div class="w-full sm:max-w-[90%] flex flex-col place-items-center">
+        <!-- <Landing /> -->
 
-    <div class="w-[65ch] mb-32">
-        <About />
+        <div class="w-[65ch] max-w-[97%] mb-32">
+            <!-- <About /> -->
 
-        <Skills />
+            <Skills />
 
-        <Projects />
+            <Projects />
 
-        <Info />
+            <Info />
+        </div>
     </div>
 </div>

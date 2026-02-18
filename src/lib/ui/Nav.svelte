@@ -19,19 +19,16 @@
     ];
 </script>
 
-<div
-    id="nav"
-    class="flex place-items-end place-content-center sm:place-items-center fixed right-0 bottom-4 sm:w-[10%] w-full h-[100vh]"
->
+<div id="nav" class="fixed flex w-full h-full z-9 place-content-center">
     <div
-        class="flex sm:flex-col gap-2 w-fit place-items-center bg-base-300/50 sm:bg-base-300/0 rounded-full p-2 backdrop-blur-md"
+        class="fixed flex place-items-center gap-3 bottom-4 bg-neutral-content/10 rounded-full p-2 backdrop-blur-md shadow-lg"
     >
         {#each buttons as { elSelector, name, Icon }}
             <NavButton {elSelector} {name} {Icon} />
         {/each}
 
         <button
-            class="btn btn-circle tooltip tooltip-left"
+            class="btn btn-circle btn-sm sm:btn-md tooltip hover:border-primary hover:border-3"
             data-tip="Toggle theme"
         >
             <label class="swap swap-rotate">
@@ -40,8 +37,8 @@
                     class="theme-controller"
                     value="emerald"
                 />
-                <Sun class="swap-off w-5 m-auto" />
-                <Moon class="swap-on w-5 m-auto" />
+                <Sun class="swap-off w-4 sm:w-5 m-auto" />
+                <Moon class="swap-on w-4 sm:w-5 m-auto" />
             </label>
         </button>
     </div>

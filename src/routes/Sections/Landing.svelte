@@ -2,7 +2,9 @@
     import { ChevronDown } from "@lucide/svelte";
 </script>
 
-<div class="text-center flex flex-col place-items-center my-[50vh]">
+<div
+    class="text-center flex flex-col place-items-center place-content-center w-full h-[100vh]"
+>
     <h1 class="text-5xl pb-2">Daniel Durling</h1>
 
     <span

@@ -21,16 +21,11 @@
                 <div class="flex flex-wrap gap-2 place-content-evenly">
                     {#each skills as { name, desc, proficiency }, j}
                         <div
-                            class={desc || proficiency ? "tooltip" : ""}
-                            data-tip={`${desc ? desc : ""} ${proficiency ? "Proficiency level: " + proficiency + "." : ""}`}
+                            class="badge badge-lg badge-soft {colorCategories[
+                                i
+                            ]}"
                         >
-                            <div
-                                class="cursor-help badge badge-lg badge-soft {colorCategories[
-                                    i
-                                ]}"
-                            >
-                                {name}
-                            </div>
+                            {name}
                         </div>
                     {/each}
                 </div>

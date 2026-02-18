@@ -2,7 +2,7 @@ See the source code at [dan/dgd.dev](https://git.dgd.sh/dan/dgd.dev)
 
 ## Stack
 
-- Astro
+- Svelte
 - TailwindCSS
 - daisyUI
 
