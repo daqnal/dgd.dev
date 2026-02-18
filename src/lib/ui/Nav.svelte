@@ -21,7 +21,7 @@
 
 <div id="nav" class="fixed flex w-full h-full z-9 place-content-center">
     <div
-        class="fixed flex place-items-center gap-3 bottom-4 bg-neutral-content/10 rounded-full p-2 backdrop-blur-md shadow-lg"
+        class="fixed flex md:scale-[80%] place-items-center gap-3 bottom-4 bg-neutral-content/10 rounded-full p-2 backdrop-blur-md shadow-lg"
     >
         {#each buttons as { elSelector, name, Icon }}
             <NavButton {elSelector} {name} {Icon} />
