@@ -2,10 +2,10 @@
     import { MediaQuery } from "svelte/reactivity";
 
     const small = new MediaQuery("min-width: 640px");
-    let { elSelector, name, Icon } = $props();
+    let { href, name, Icon } = $props();
 </script>
 
-<a href={elSelector}>
+<a {href}>
     <div class="tooltip" data-tip={name}>
         <button
             class="btn sm:btn-xl btn-circle hover:border-primary hover:border-3"

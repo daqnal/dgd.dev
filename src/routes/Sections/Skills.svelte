@@ -3,6 +3,8 @@
 
     const colorCategories = [
         "badge-primary",
+        "badge-info",
+        "badge-secondary",
         "badge-accent",
         "badge-success",
         "badge-warning",

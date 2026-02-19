@@ -110,6 +110,15 @@ export const skillGroups: SkillGroup[] = [
         ],
     },
     {
+        name: "Scripts & Markup",
+        skills: [
+            { name: "HTML" },
+            { name: "CSS" },
+            { name: "LaTeX" },
+            { name: "Typst" },
+        ]
+    },
+    {
         name: "Software",
         skills: [
             {
@@ -119,6 +128,15 @@ export const skillGroups: SkillGroup[] = [
             {
                 name: "Vim/Neovim",
                 proficiency: 40
+            },
+            {
+                name: "VSCode"
+            },
+            {
+                name: "Zed"
+            },
+            {
+                name: "Obsidian"
             },
             {
                 name: "DaVinci Resolve",
@@ -140,7 +158,19 @@ export const skillGroups: SkillGroup[] = [
                 name: "Microsoft Office",
                 proficiency: 70,
             },
+            {
+                name: "YunoHost"
+            },
         ],
+    },
+    {
+        name: "Operating Systems",
+        skills: [
+            { name: "Arch Linux" },
+            { name: "Debian/Ubuntu" },
+            { name: "Windows" },
+
+        ]
     },
     {
         name: "CS Coursework",
@@ -158,7 +188,7 @@ export const skillGroups: SkillGroup[] = [
                 name: "Objects & Design",
             },
             {
-                name: "Computer Organization & Principles (Assembly & C)",
+                name: "Fundamentals, Assembly, & C",
             },
             {
                 name: "Intro to Perception & Robotics",

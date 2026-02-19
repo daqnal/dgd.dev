@@ -24,7 +24,7 @@
         class="fixed flex md:scale-[80%] place-items-center gap-3 bottom-4 bg-neutral-content/10 rounded-full p-2 backdrop-blur-md shadow-lg"
     >
         {#each buttons as { elSelector, name, Icon }}
-            <NavButton {elSelector} {name} {Icon} />
+            <NavButton href={elSelector} {name} {Icon} />
         {/each}
 
         <button

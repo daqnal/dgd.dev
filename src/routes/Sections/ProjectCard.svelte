@@ -1,4 +1,5 @@
 <script>
+    import { SquareArrowOutUpRight } from "@lucide/svelte";
     import SvelteMarkdown from "svelte-marked";
 
     let { title, images, icon: Icon, link, desc, md } = $props();
