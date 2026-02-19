@@ -13,7 +13,7 @@
     <h2 id="projects" class="text-4xl text-center mb-4 mt-8">Projects</h2>
 
     <div
-        class="w-full max-w-full flex gap-2 overflow-x-auto bg-base-200 rounded-box p-2 mb-4"
+        class="w-full max-w-full flex flex-wrap place-content-evenly gap-2 bg-base-200 rounded-t-box p-2"
     >
         {#each projects as { title, icon: Icon }, i}
             <button

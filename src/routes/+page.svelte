@@ -7,10 +7,10 @@
     import Skills from "./Sections/Skills.svelte";
 </script>
 
-<div class="flex flex-col items-center sm:items-start" id="top">
+<div class="relative flex flex-col items-center sm:items-start" id="top">
     <Nav />
 
-    <div class="w-full flex flex-col place-items-center">
+    <div class="z-0 w-full flex flex-col place-items-center">
         <Landing />
 
         <div class="w-[65ch] max-w-[97%] mb-32">

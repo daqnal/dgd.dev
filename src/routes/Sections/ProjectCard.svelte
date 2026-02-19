@@ -4,11 +4,22 @@
     let { title, images, icon: Icon, link, desc, md } = $props();
 </script>
 
-<div class="bg-base-100">
-    <div class="relative bg-base-200">
+<div>
+    <div class="relative rounded-tl-box">
+        <div class="carousel flex w-full">
+            {#each images as image, i}
+                <div id="item{i + 1}" class="carousel-item relative w-full">
+                    <img
+                        src="/images/projects/{image}"
+                        alt={title}
+                        class="w-full"
+                    />
+                </div>
+            {/each}
+        </div>
         <div
             style="position: absolute; left: 0; right: 0; margin-inline: auto; width: fit-content;"
-            class="bottom-4 z-1 flex place-items-center gap-4"
+            class="bottom-4 flex place-items-center gap-4"
         >
             <a
                 class="btn btn-soft font-bold flex gap-2 place-content-center p-2 rounded-full shadow-lg backdrop-blur-sm opacity-85"
@@ -29,18 +40,6 @@
                     {/each}
                 {/if}
             </div>
-        </div>
-
-        <div class="carousel rounded-t-box w-full">
-            {#each images as image, i}
-                <div id="item{i + 1}" class="carousel-item relative w-full">
-                    <img
-                        src="/images/projects/{image}"
-                        alt={title}
-                        class="w-full"
-                    />
-                </div>
-            {/each}
         </div>
     </div>
 

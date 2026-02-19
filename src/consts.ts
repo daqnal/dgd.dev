@@ -12,7 +12,7 @@ interface Project {
     icon: typeof IconType;
     link: string;
     desc: string;
-    md: object;
+    md: string;
 }
 
 
@@ -189,14 +189,6 @@ export const skillGroups: SkillGroup[] = [
 
 export const projects: Project[] = [
     {
-        title: "grabagram",
-        icon: Instagram,
-        images: ["grabagram.png"],
-        link: "https://git.dgd.sh/dan/grabagram",
-        desc: "Instagram reel downloader",
-        md: GrabagramMD,
-    },
-    {
         title: "flowysurf",
         icon: Waves,
         images: ["flowysurf.png", "flowysurf2.png", "flowysurf3.png"],
@@ -228,5 +220,12 @@ export const projects: Project[] = [
         desc: "Config files for a beautiful Hyprland setup on Arch Linux",
         md: HyprlandMD,
     },
-
+    {
+        title: "grabagram",
+        icon: Instagram,
+        images: ["grabagram.png"],
+        link: "https://git.dgd.sh/dan/grabagram",
+        desc: "Instagram reel downloader",
+        md: GrabagramMD,
+    },
 ]
