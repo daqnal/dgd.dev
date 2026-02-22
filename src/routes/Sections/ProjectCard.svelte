@@ -1,7 +1,5 @@
 <script>
-    import SvelteMarkdown from "svelte-marked";
-
-    let { title, images, icon: Icon, link, desc, md } = $props();
+    let { title, images, icon: Icon, link, desc, md: Markdown } = $props();
 </script>
 
 <div>
@@ -44,6 +42,6 @@
     </div>
 
     <article class="prose w-full bg-base-200 p-4 rounded-b-box">
-        <SvelteMarkdown source={md} />
+        <Markdown />
     </article>
 </div>

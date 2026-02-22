@@ -8,7 +8,7 @@
 <a {href}>
     <div class="tooltip lg:tooltip-left" data-tip={name}>
         <button
-            class="btn sm:btn-xl btn-circle hover:border-primary hover:border-3 bg-base-200/95"
+            class="btn sm:btn-xl btn-circle border-0 hover:border-primary hover:border-3 bg-base-200/80"
         >
             <Icon size={small.current ? "24" : "20"} />
         </button>

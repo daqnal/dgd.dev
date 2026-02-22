@@ -20,11 +20,14 @@
         <enhanced:img
             class="object-cover w-full h-full rounded-box"
             src="/src/lib/assets/images/mtns.jpg"
-            alt="Grassy mountains at sunset."
         />
     </div>
 
-    <h1 class="text-5xl mb-2">Daniel Durling</h1>
+    <h1
+        class="text-5xl mb-2 text-[oklch(22.629% 0.021 280.487)] text-shadow-md"
+    >
+        Daniel Durling
+    </h1>
 
     <span
         class="text-rotate w-fit text-2xl duration-10000 italic rounded-full capitalize mx-2 text-neutral"

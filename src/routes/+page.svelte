@@ -1,5 +1,5 @@
 <script>
-    import Nav from "$lib/ui/Nav.svelte";
+    import LandingNav from "$lib/ui/LandingNav.svelte";
     import About from "./Sections/About.svelte";
     import Info from "./Sections/Info.svelte";
     import Landing from "./Sections/Landing.svelte";
@@ -8,7 +8,7 @@
 </script>
 
 <div class="relative flex flex-col items-center sm:items-start" id="top">
-    <Nav />
+    <LandingNav />
 
     <div class="z-0 w-full flex flex-col place-items-center">
         <Landing />

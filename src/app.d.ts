@@ -1,5 +1,8 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
+import type { Component } from 'svelte';
+
+
 declare global {
 	namespace App {
 		// interface Error {}
@@ -10,6 +13,11 @@ declare global {
 	}
 }
 
-declare module "*.md";
+declare module '*.md' {
+	const component: Component<any>;
+	export default component;
+
+	export const metadata: Record<string, any>;
+}
 
 export { };

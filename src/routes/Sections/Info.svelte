@@ -1,6 +1,5 @@
 <script>
-    import SvelteMarkdown from "svelte-marked";
-    import md from "$lib/md/info.md?raw";
+    import Markdown from "$lib/md/info.md";
 </script>
 
 <div>
@@ -8,7 +7,7 @@
 
     <div class="bg-base-200 rounded-box p-4">
         <article class="prose">
-            <SvelteMarkdown source={md} />
+            <Markdown />
         </article>
     </div>
 </div>
