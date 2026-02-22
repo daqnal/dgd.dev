@@ -1,10 +1,10 @@
 import { Instagram, Rat, Waves, CircleUserRound, Sparkles, type Icon as IconType } from "@lucide/svelte";
 
-import FlowysurfMD from "$lib/md/flowysurf.md";
-import GrabagramMD from "$lib/md/grabagram.md";
-import MinisiteMD from "$lib/md/minisite.md";
-import RatMD from "$lib/md/rat.md";
-import HyprlandMD from "$lib/md/hyprland.md";
+import FlowysurfMD from "$lib/md/landing/flowysurf.md";
+import GrabagramMD from "$lib/md/landing/grabagram.md";
+import MinisiteMD from "$lib/md/landing/minisite.md";
+import RatMD from "$lib/md/landing/rat.md";
+import HyprlandMD from "$lib/md/landing/hyprland.md";
 
 
 interface Project {

@@ -1,5 +1,6 @@
 <script>
-    import Markdown from "$lib/md/about.md";
+    // @ts-ignore
+    import Markdown from "$lib/md/landing/about.md";
 </script>
 
 <div>
