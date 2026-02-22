@@ -6,9 +6,9 @@
 </script>
 
 <a {href}>
-    <div class="tooltip" data-tip={name}>
+    <div class="tooltip lg:tooltip-left" data-tip={name}>
         <button
-            class="btn sm:btn-xl btn-circle hover:border-primary hover:border-3"
+            class="btn sm:btn-xl btn-circle hover:border-primary hover:border-3 bg-base-200/95"
         >
             <Icon size={small.current ? "24" : "20"} />
         </button>

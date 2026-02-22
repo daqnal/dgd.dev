@@ -24,14 +24,14 @@
     class="z-1 fixed flex w-full place-content-center lg:h-full lg:place-items-center lg:place-content-end"
 >
     <div
-        class="fixed lg:relative lg:h-fit flex lg:flex-col md:scale-[80%] place-items-center gap-3 bottom-4 lg:bottom-0 lg:right-5 bg-neutral-content/10 rounded-full p-2 backdrop-blur-md shadow-lg"
+        class="fixed lg:relative lg:h-fit flex lg:flex-col md:scale-[80%] place-items-center gap-3 bottom-4 lg:bottom-0 lg:right-8 bg-neutral-content/15 rounded-full p-2 backdrop-blur-md shadow-lg"
     >
         {#each buttons as { elSelector, name, Icon }}
             <NavButton href={elSelector} {name} {Icon} />
         {/each}
 
         <button
-            class="btn btn-circle btn-sm sm:btn-md tooltip hover:border-primary hover:border-3"
+            class="btn btn-circle btn-sm sm:btn-md tooltip lg:tooltip-left hover:border-primary hover:border-3"
             data-tip="Toggle theme"
         >
             <label class="swap swap-rotate">

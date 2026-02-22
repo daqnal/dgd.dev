@@ -6,6 +6,7 @@ import MinisiteMD from "$lib/md/minisite.md?raw";
 import RatMD from "$lib/md/rat.md?raw";
 import HyprlandMD from "$lib/md/hyprland.md?raw";
 
+
 interface Project {
     title: string;
     images: string[];

@@ -1,5 +1,4 @@
 <script>
-    import { SquareArrowOutUpRight } from "@lucide/svelte";
     import SvelteMarkdown from "svelte-marked";
 
     let { title, images, icon: Icon, link, desc, md } = $props();
@@ -11,7 +10,7 @@
             {#each images as image, i}
                 <div id="item{i + 1}" class="carousel-item relative w-full">
                     <img
-                        src="/images/projects/{image}"
+                        src="/src/lib/assets/images/projects/{image}"
                         alt={title}
                         class="w-full"
                     />
