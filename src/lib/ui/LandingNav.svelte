@@ -24,14 +24,14 @@
     class="z-1 pointer-events-none fixed flex w-full place-content-center lg:w-full lg:h-full lg:place-items-center lg:place-content-end"
 >
     <div
-        class="fixed pointer-events-auto lg:relative lg:h-fit flex lg:flex-col md:scale-[80%] place-items-center gap-3 bottom-4 lg:bottom-0 lg:right-8 bg-neutral-content/15 rounded-full p-2 backdrop-blur-md shadow-lg"
+        class="fixed pointer-events-auto lg:relative lg:h-fit flex lg:flex-col md:scale-[80%] place-items-center gap-1 sm:gap-3 bottom-4 lg:bottom-0 lg:right-8 bg-neutral-content/15 rounded-full p-2 backdrop-blur-md shadow-lg"
         data-tip="Posts"
     >
         {#each buttons as { elSelector, name, Icon }}
             <LandingNavButton href={elSelector} {name} {Icon} />
         {/each}
 
-        <button
+        <!-- <button
             class="btn btn-circle btn-sm bg-base-200/80 sm:btn-md tooltip lg:tooltip-left border-0 hover:border-primary hover:border-3"
             data-tip="Posts"
         >
@@ -41,7 +41,7 @@
             >
                 <Scroll class="w-4 sm:w-5" />
             </a>
-        </button>
+        </button> -->
 
         <button
             class="btn btn-circle btn-sm bg-base-200/80 sm:btn-md tooltip lg:tooltip-left border-0 hover:border-primary hover:border-3"
