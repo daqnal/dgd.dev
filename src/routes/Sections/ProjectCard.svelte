@@ -1,18 +1,34 @@
-<script>
+<script lang="ts">
     let { title, images, icon: Icon, link, desc, md: Markdown } = $props();
+
+    const allImages: Record<string, any> = import.meta.glob(
+        `$lib/assets/images/projects/*.{png,gif}`,
+        {
+            eager: true,
+            query: "?url",
+            import: "default",
+        },
+    );
 </script>
 
 <div>
     <div class="relative rounded-tl-box">
         <div class="carousel flex w-full">
-            {#each images as image, i}
-                <div id="item{i + 1}" class="carousel-item relative w-full">
-                    <img
-                        src="/src/lib/assets/images/projects/{image}"
-                        alt={title}
-                        class="w-full"
-                    />
-                </div>
+            {#each images as imageName, i}
+                {@const imagePath = `/src/lib/assets/images/projects/${imageName}`}
+                {@const imageData = allImages[imagePath]}
+
+                {#if imageData}
+                    <div id="item{i + 1}" class="carousel-item relative w-full">
+                        <img src={imageData} alt={title} class="w-full" />
+                    </div>
+                {:else}
+                    <div
+                        class="bg-base-300 rounded-none w-full h-24 flex items-center justify-center"
+                    >
+                        Image failed to load: {imagePath}
+                    </div>
+                {/if}
             {/each}
         </div>
         <div
