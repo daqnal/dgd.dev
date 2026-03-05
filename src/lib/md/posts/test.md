@@ -1,7 +1,7 @@
 ---
 title: Test Post
 date: 2026-03-24
-form: Article
+form: article
 tags: [test, linux]
 ---
 

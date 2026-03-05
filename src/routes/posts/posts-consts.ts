@@ -14,9 +14,18 @@ export const validTags = [
     "random"
 ]
 
-export const validForms = [
-    "Article",
-    "Guide",
-    "Miscellaneous",
-    "Commentary"
+export const POST_FORMS = [
+    "article",
+    "guide",
+    "miscellaneous",
+    "commentary",
+    "photo"
 ]
+export type PostForm = typeof POST_FORMS[number];
+
+export interface Post {
+    slug: string,
+    title: string,
+    date: string,
+    form: PostForm,
+}
