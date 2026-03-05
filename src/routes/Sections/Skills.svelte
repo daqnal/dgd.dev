@@ -23,7 +23,7 @@
                 <div class="flex flex-wrap gap-2 place-content-evenly">
                     {#each skills as { name, desc, proficiency }, j}
                         <div
-                            class="badge badge-lg badge-soft {colorCategories[
+                            class="badge cursor-default badge-lg badge-soft {colorCategories[
                                 i
                             ]}"
                         >

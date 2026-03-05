@@ -35,5 +35,5 @@ Currently, flowysurf is a frontend project, though development is underway to ma
 - JSON data management
 
 ## Links
-- Website: [flowy.surf](https://flow.surf)
+- Website: [flowy.surf](https://flowy.surf)
 - Source code: [dan/flowysurf](https://git.dgd.sh/dan/flowysurf)

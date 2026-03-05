@@ -24,7 +24,7 @@
     </div>
 
     <h1
-        class="text-5xl mb-2 text-[oklch(22.629% 0.021 280.487)] text-shadow-md"
+        class="text-5xl text-white/90 mb-2 text-[oklch(22.629% 0.021 280.487)] text-shadow-md"
     >
         Daniel Durling
     </h1>

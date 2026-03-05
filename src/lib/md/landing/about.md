@@ -4,6 +4,7 @@ To get in touch, shoot me an email at [dgdurling@pm.me](mailto:dgdurling@pm.me).
 
 ## Links
 
+- [Posts, files, and other pages](/posts)
 - [Git server](https://git.dgd.sh)
 - [GitHub](https://github.com/daqnal)
 - [LinkedIn](https://www.linkedin.com/in/dgdur)
