@@ -1,7 +1,8 @@
-import { Instagram, Rat, Waves, CircleUserRound, Sparkles, type Icon as IconType } from "@lucide/svelte";
+import { Rat, Waves, CircleUserRound, Sparkles, type Icon as IconType, Scroll } from "@lucide/svelte";
 
+import FormalHomeworkMD from "$lib/md/landing/formal-homework.md";
 import FlowysurfMD from "$lib/md/landing/flowysurf.md";
-import GrabagramMD from "$lib/md/landing/grabagram.md";
+// import GrabagramMD from "$lib/md/landing/grabagram.md";
 import MinisiteMD from "$lib/md/landing/minisite.md";
 import RatMD from "$lib/md/landing/rat.md";
 import HyprlandMD from "$lib/md/landing/hyprland.md";
@@ -51,11 +52,6 @@ export const skillGroups: SkillGroup[] = [
             },
             {
                 name: "C",
-                proficiency: 0,
-                desc: "To be learned in class Spring 2026.",
-            },
-            {
-                name: "x86 Assembly",
                 proficiency: 0,
                 desc: "To be learned in class Spring 2026.",
             },
@@ -189,7 +185,7 @@ export const skillGroups: SkillGroup[] = [
                 name: "Objects & Design",
             },
             {
-                name: "Fundamentals, Assembly, & C",
+                name: "Computer Organization & Principles",
             },
             {
                 name: "Intro to Perception & Robotics",
@@ -228,6 +224,22 @@ export const projects: Project[] = [
         md: FlowysurfMD,
     },
     {
+        title: "Typst Homework",
+        icon: Scroll,
+        images: ["proof1.png", "proof2.png", "subquestions.png"],
+        link: "https://typst.app/universe/package/formal-homework",
+        desc: "A small Typst package that provides an easy way to start writing formal homework documents",
+        md: FormalHomeworkMD,
+    },
+    {
+        title: "Hyprland Dotfiles",
+        icon: Sparkles,
+        images: ["hyprland.png"],
+        link: "https://git.dgd.sh/dan/hyprland-dotfiles",
+        desc: "Config files for a beautiful Hyprland setup on Arch Linux",
+        md: HyprlandMD,
+    },
+    {
         title: "rat",
         icon: Rat,
         images: ["rat.gif"],
@@ -242,21 +254,5 @@ export const projects: Project[] = [
         link: "https://git.dgd.sh/dan/personal-minisite-template",
         desc: "Template to get a cusotmized static portfolio site up and runing",
         md: MinisiteMD,
-    },
-    {
-        title: "Hyprland Dotfiles",
-        icon: Sparkles,
-        images: ["hyprland.png"],
-        link: "https://git.dgd.sh/dan/hyprland-dotfiles",
-        desc: "Config files for a beautiful Hyprland setup on Arch Linux",
-        md: HyprlandMD,
-    },
-    {
-        title: "grabagram",
-        icon: Instagram,
-        images: ["grabagram.png"],
-        link: "https://git.dgd.sh/dan/grabagram",
-        desc: "Instagram reel downloader",
-        md: GrabagramMD,
     },
 ]
