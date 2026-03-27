@@ -1,4 +1,4 @@
-export const validTags = [
+export const POST_TAGS = [
     "tech",
     "biblical",
     "religion",

@@ -12,9 +12,11 @@
       name: "Photos",
       url: "/posts/photos",
     },
+
+    const pinned = [];
   ];
 
-  const dev = true;
+  const dev = false;
 </script>
 
 {#if !dev}
