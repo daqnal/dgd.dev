@@ -1,37 +1,37 @@
 <script>
-    import { skillGroups } from "../../consts.ts";
+  import { skillGroups } from "../../consts.ts";
 
-    const colorCategories = [
-        "badge-primary",
-        "badge-info",
-        "badge-secondary",
-        "badge-accent",
-        "badge-success",
-        "badge-warning",
-        "badge-error",
-    ];
+  const colorCategories = [
+    "badge-primary",
+    "badge-info",
+    "badge-secondary",
+    "badge-accent",
+    "badge-success",
+    "badge-warning",
+    "badge-error",
+  ];
 </script>
 
 <div>
-    <h2 id="skills" class="text-4xl text-center mb-4 mt-8">Skills</h2>
+  <h2 id="skills" class="text-4xl text-center mb-4 mt-8">Skills</h2>
 
-    <div class="bg-base-200 rounded-box">
-        {#each skillGroups as { name, skills }, i}
-            <div class="p-4">
-                <h3 class="text-xl text-center mb-4">{name}</h3>
+  <div class="bg-base-200 rounded-box">
+    {#each skillGroups as { name, skills }, i}
+      <div class="p-4">
+        <h3 class="text-xl text-center mb-4">{name}</h3>
 
-                <div class="flex flex-wrap gap-2 place-content-evenly">
-                    {#each skills as { name, desc, proficiency }, j}
-                        <div
-                            class="badge cursor-default badge-lg badge-soft {colorCategories[
-                                i
-                            ]}"
-                        >
-                            {name}
-                        </div>
-                    {/each}
-                </div>
+        <div class="flex flex-wrap gap-2 place-content-evenly">
+          {#each skills as { name, desc, proficiency }, j}
+            <div
+              class="badge cursor-default badge-lg badge-soft {colorCategories[
+                i
+              ]}"
+            >
+              {name}
             </div>
-        {/each}
-    </div>
+          {/each}
+        </div>
+      </div>
+    {/each}
+  </div>
 </div>

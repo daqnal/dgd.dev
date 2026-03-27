@@ -1,26 +1,26 @@
 <script>
-    import LandingNav from "$lib/ui/LandingNav.svelte";
-    import About from "./Sections/About.svelte";
-    import Info from "./Sections/Info.svelte";
-    import Landing from "./Sections/Landing.svelte";
-    import Projects from "./Sections/Projects.svelte";
-    import Skills from "./Sections/Skills.svelte";
+  import LandingNav from "$lib/ui/LandingNav.svelte";
+  import About from "./Sections/About.svelte";
+  import Info from "./Sections/Info.svelte";
+  import Landing from "./Sections/Landing.svelte";
+  import Projects from "./Sections/Projects.svelte";
+  import Skills from "./Sections/Skills.svelte";
 </script>
 
-<div class="relative flex flex-col items-center sm:items-start" id="top">
-    <LandingNav />
+<div class="relative flex flex-col items-center sm:items-start">
+  <LandingNav />
 
-    <div class="z-0 w-full flex flex-col place-items-center">
-        <Landing />
+  <div class="z-0 w-full flex flex-col place-items-center">
+    <Landing />
 
-        <div class="w-[65ch] max-w-[97%] mb-32">
-            <About />
+    <div class="w-[65ch] max-w-[97%] mb-32">
+      <About />
 
-            <Skills />
+      <Skills />
 
-            <Projects />
+      <Projects />
 
-            <Info />
-        </div>
+      <Info />
     </div>
+  </div>
 </div>
