@@ -1,26 +1,18 @@
-<script>
-  import LandingNav from "$lib/ui/LandingNav.svelte";
-  import About from "./Sections/About.svelte";
-  import Info from "./Sections/Info.svelte";
-  import Landing from "./Sections/Landing.svelte";
-  import Projects from "./Sections/Projects.svelte";
-  import Skills from "./Sections/Skills.svelte";
-</script>
+<h1>dgd.dev</h1>
+<h2>gurt</h2>
 
-<div class="relative flex flex-col items-center sm:items-start">
-  <LandingNav />
+<ul>
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+</ul>
 
-  <div class="z-0 w-full flex flex-col place-items-center">
-    <Landing />
+<ol>
+  <li>a</li>
+  <li>b</li>
+  <li>c</li>
+</ol>
 
-    <div class="w-[65ch] max-w-[97%] mb-32">
-      <About />
+<button>ya</button>
 
-      <Skills />
-
-      <Projects />
-
-      <Info />
-    </div>
-  </div>
-</div>
+<a href="/posts">f k l o r s</a>
