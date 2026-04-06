@@ -2,22 +2,28 @@
 // for information about these interfaces
 import type { Component } from 'svelte';
 
-
 declare global {
 	namespace App {
+		interface Platform {
+			env: Env;
+			ctx: ExecutionContext;
+			caches: CacheStorage;
+			cf?: IncomingRequestCfProperties
+		}
+
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
 		// interface PageState {}
-		// interface Platform {}
 	}
 }
 
-declare module '*.md' {
+declare '*.md' {
 	const component: Component<any>;
+
 	export default component;
 
 	export const metadata: Record<string, any>;
 }
 
-export { };
+export {};
