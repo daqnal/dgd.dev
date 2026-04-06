@@ -13,7 +13,7 @@
       url: "/posts/photos",
     },
 
-    const pinned = [];
+    // const pinned = [];
   ];
 
   const dev = false;
