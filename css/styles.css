@@ -1,0 +1,41 @@
+/* NAVBAR */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: var(--color-base-100);
+}
+
+#navbar-title {
+  text-decoration: none;
+  color: var(--color-base-content);
+}
+
+/* LANDING */
+
+#landing-main {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#landing-content {
+  width: auto;
+  height: 50%;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#landing-content ul {
+  text-align: left;
+}
+
+#landing-hr {
+  margin-top: 16px;
+}
