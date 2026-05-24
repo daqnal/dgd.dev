@@ -1,0 +1,56 @@
+
+---
+import PageLayout from "../layouts/Page.astro";
+
+const { title, pubDate, desc, tags } = Astro.props;
+---
+
+
+<PageLayout nav={true}>
+  <main id="blog-main">
+    <div id="blog-content">
+    <h1>{title}</h1>
+    <p>{pubDate.toLocaleString("en-us")}</p>
+    <div id="tags-p">
+      {tags.map((tag) => (
+        <span>{tag}</span>
+      ))}
+    </div>
+    <p id="blog-desc">{desc}</p>
+    <hr>
+    <slot />
+    </div>
+  </main>
+</PageLayout>
+
+<style>
+  #blog-main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #blog-content {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #blog-desc {
+    margin: 10px 0;
+  }
+
+  #tags-p {
+    display: flex;
+    gap: 10px;
+  }
+
+  #tags-p span {
+    padding: 0px 10px;
+    background-color: var(--color-base-100)
+  }
+</style>

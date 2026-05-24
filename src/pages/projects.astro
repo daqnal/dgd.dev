@@ -1,0 +1,98 @@
+---
+import PageLayout from "../layouts/Page.astro";
+
+const projects = [
+  {
+    name: "formal-homework",
+    emoji: "📘",
+    desc: "A small Typst package that provides an easy way to start writing formal homework documents",
+    link: "https://typst.app/universe/package/formal-homework",
+  },
+  {
+    name: "Hyprland dotfiles",
+    emoji: "✨",
+    desc: "Personal config files for a Hyprland desktop",
+    link: "https://git.dgd.sh/dan/hyprland-dotfiles",
+  },
+  {
+    name: "rat",
+    emoji: "🐀",
+    desc: "The legendary spinning rat, now in 3d and on the web",
+    link: "https://rat.dance",
+  },
+  {
+    name: "flowy.surf",
+    emoji: "🌊",
+    desc: "Visual flowchart editor for tracking project progress",
+    link: "https://flowy.surf",
+  },
+  {
+    name: "Apologetics Club",
+    emoji: "✝️",
+    desc: "Repository of information for Christian apologetics",
+    link: "https://apologetics.club",
+  },
+  {
+    name: "Hugo Blog Template",
+    emoji: "⌨️",
+    desc: "A pretty start template for a Hugo blog, search included",
+    link: "https://git.dgd.sh/dan/blog-template",
+  },
+  {
+    name: "error-lobotomy",
+    emoji: "😵",
+    desc: "Let your ears be blessed by brainrot upon command failure",
+    link: "https://git.dgd.sh/dan/error-lobotomy",
+  }
+]
+---
+
+
+<PageLayout nav={true}>
+  <main id="projects-main">
+    <div id="projects-content">
+      
+      <h1>Projects</h1>
+
+      <dl>
+        {projects.map((proj) => (
+          <div>
+            <dt>{proj.emoji} <a href={proj.link}>{proj.name}</a></dt>
+            <dd>{proj.desc}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <hr>
+
+      <p id="projects-bottom-p">Find all of my public code on my <a href="https://git.dgd.sh">git server</a></p>
+    </div>
+  </main>
+</PageLayout>
+
+
+<style>
+  #projects-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #projects-content {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 5vh 10px;
+  }
+
+  #projects-bottom-p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 1em;
+  }
+</style>
+

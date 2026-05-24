@@ -1,3 +1,0 @@
-- Agile development
-- Self-hosting
-- Scrum

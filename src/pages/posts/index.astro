@@ -1,0 +1,63 @@
+
+---
+import PageLayout from "../../layouts/Page.astro";
+
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+
+const sortedPosts = allPosts.sort((a: any, b: any) => {
+  const dateA = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
+  const dateB = b.data.pubDate ? new Date(b.data.pubDate).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+
+<PageLayout nav={true}>
+  <main id="posts-main">
+    <div id="posts-content">
+      <h1>Posts</h1>
+      <dl>
+        {sortedPosts.map((post: any) => {
+          const link = "/posts/" + post.id;
+          const dateString = post.data.pubDate.toLocaleDateString('en-US');
+
+          return (
+            <div>
+              <dt>
+                <a href={link}>
+                  {post.data.title}
+                </a>
+              </dt>
+              <dd>
+                {dateString}
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+    </div>
+  </main>
+</PageLayout>
+
+
+<style>
+  #posts-main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #posts-content {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* padding-top: 5vh; */
+  }
+</style>
