@@ -124,9 +124,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-}
-
-html {
   background-color: var(--color-base-200);
 }
 
@@ -152,6 +149,14 @@ hr {
 }
 
 /* CLASSES */
+
+.text-sm {
+  font-size: 0.75em;
+}
+
+.text-lg {
+  font-size: 1.25em;
+}
 
 .serif {
   font-family: "Libertinus Serif";
