@@ -34,12 +34,18 @@ const { nav } = Astro.props;
 <style>
 
   body {
+    min-height: 100%;
+    height: fit-content;
     overflow-y: none;
+    display: flex;
+    flex-direction: column;
   }
 
   #scrollable {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 </style>
 

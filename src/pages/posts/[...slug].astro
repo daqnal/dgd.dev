@@ -16,13 +16,12 @@ const { Content } = await render(post);
 ---
 
 <BlogLayout {...post.data}>
-  <div id="md-container">
     <Content />
-  </div>
 </BlogLayout>
 
 
 <style>
-  #md-container {
+  h1 {
+    font-family: "Libertinus Serif" !important;
   }
 </style>
