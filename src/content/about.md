@@ -1,59 +1,18 @@
 # About
 
-## Skills
+A paragraph on a webpage vainly summarizes a person, nevertheless, here is a short description of me.
 
-### Languages
+I am a computer science student at Georgia Tech, concentrating on devices and systems & architecture.
+Eagerly awaiting placing fries in the bag, I spend my free time working on side projects, playing sports with friends, or exploring mountains and caves.
 
-- Python
-- C
-- Java
-- JavaScript
+![Sunset over Yonah Mountain](../content/images/mtns.jpg)
+_Sunset over Yonah Mountain, September 2024_
 
-### Web Tools & Platforms
+## Contact
 
-- React
-- Svelte
-- Next
-- Tauri
-- Astro
-- Hugo
-- Prisma
-- Express
-- Tailwind
-- Supabase
-- Cloudflare
-- Vercel
+I don't have any social media; find me in real life.
 
-### Software
-
-- Vim/Neovim
-- DaVinci Resolve
-- Adobe Creative Cloud
-- Microsoft 365
-
-### Operating Systems
-
-- Windows Home/Pro
-- Archlinux
-- Debian
-- Ubuntu
-
-## Selected Coursework
-
-### Computer Science
-
-- Intro to Computing (Python)
-- Intro to OOP (Java)
-- Data Structures & Algorithms
-- Objects & Design (OOP patterns, SW architecture)
-- Computer Organization and Principles (Assembly, C)
-- Intro to Perception and Robotics
-
-### Mathematics
-
-- Linear Algebra
-- Probability & Statistics
-- Discrete Mathematics
+For business purposes, reach out to <dgdurling@pm.me>.
 
 ---
 

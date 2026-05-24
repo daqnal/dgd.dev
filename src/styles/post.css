@@ -1,0 +1,25 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.25lh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p em {
+  font-size: 0.7em;
+}
+
+code {
+  background-color: var(--color-base-100);
+}
+
+p {
+  margin-bottom: 1lh;
+}
