@@ -1,0 +1,35 @@
+
+---
+import PageLayout from "../layouts/Page.astro";
+import About from "../content/about.md";
+---
+
+
+<PageLayout nav={true}>
+  <main id="about-main">
+    <div id="about-content">
+      <About />
+    </div>
+  </main>
+</PageLayout>
+
+
+<style>
+  #about-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #about-content {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 5vh 10px;
+  }
+</style>

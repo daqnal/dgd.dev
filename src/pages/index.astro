@@ -1,0 +1,59 @@
+---
+import PageLayout from "../layouts/Page.astro";
+---
+
+<PageLayout>
+    <main id="landing-main">
+      <div id="landing-content">
+        <h1 id="landing-title">Daniel Durling</h1>
+        <p>
+          <a href="/projects">[/projects]</a>
+          <span> | </span>
+          <a href="/about">[/about]</a>
+        </p>
+
+        <hr id="landing-hr" />
+
+        <ul id="landing-list">
+          <li>Computer Science @ Georgia Tech</li>
+          <li>Working on <a href="https://git.dgd.sh">personal projects</a></li>
+          <li>
+            Developing frontend for <a href="https://gtagora.com">GT Agora</a>
+          </li>
+          <li>
+            <p>Available to help you or your org...</p>
+            <ul>
+              <li>Develop websites and apps</li>
+              <li>Troubleshoot and repair devices</li>
+              <li>Consult for tech-related advice</li>
+              <li>Create and edit video</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </main>
+</PageLayout>
+
+
+<style>
+  #landing-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #landing-content {
+    width: auto;
+    height: 50%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #landing-list {
+    text-align: left;
+  }
+</style>
+
