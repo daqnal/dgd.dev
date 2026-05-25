@@ -8,50 +8,60 @@ const { title, pubDate, desc, tags } = Astro.props;
 
 
 <PageLayout nav={true}>
-  <main id="blog-main">
-    <div id="blog-content">
-    <h1>{title}</h1>
-    <p>{pubDate.toLocaleString("en-us")}</p>
-    <div id="tags-p" class="text-sm">
-      {tags.map((tag: any) => (
-        <span>{tag}</span>
-      ))}
-    </div>
-    <p id="blog-desc">{desc}</p>
-    <hr>
-    <slot />
+  <main id="post-main">
+    <div id="post-container">
+      <div>
+        <h1 id="post-title">{title}</h1>
+        <div id="date-tags-container">
+          <span>
+{pubDate.toLocaleDateString("en-us")}
+          </span>
+
+            {tags.map((tag: any) => (
+              <span class="tag text-sm">{tag}</span>
+            ))}
+        </div>
+        <p id="post-desc">{desc}</p>
+      </div>
+      <hr>
+
+      <div>
+        <slot />
+      </div>
     </div>
   </main>
 </PageLayout>
 
 <style>
-  #blog-main {
+  #post-main {
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  #blog-content {
+  #post-container {
     width: 100%;
     max-width: 600px;
     min-height: 100%;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Libertinus Serif";
   }
 
-  #blog-desc {
+  #post-desc {
     margin: 10px 0;
   }
 
-  #tags-p {
+  #date-tags-container {
+    width: 100%;
     display: flex;
     gap: 10px;
+    align-items: center;
   }
 
-  #tags-p span {
+  .tag {
     padding: 0px 10px;
     background-color: var(--color-base-100)
   }
