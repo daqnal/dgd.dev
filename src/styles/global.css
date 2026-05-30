@@ -148,6 +148,10 @@ hr {
   width: 100%;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
 /* CLASSES */
 
 .text-sm {
@@ -158,6 +162,34 @@ hr {
   font-size: 1.25em;
 }
 
-.serif {
+.serif,
+.serif * {
   font-family: "Libertinus Serif";
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox .checkmark {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background-color: var(--color-base-content);
+  vertical-align: middle;
+  margin-right: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 0.22em;
+  top: 0.1em;
+  width: 0.2em;
+  height: 0.4em;
+  border: solid var(--color-base-200);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }

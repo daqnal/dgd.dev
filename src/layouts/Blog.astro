@@ -1,11 +1,9 @@
-
 ---
 import PageLayout from "../layouts/Page.astro";
 import "../styles/post.css";
 
 const { title, pubDate, desc, tags } = Astro.props;
 ---
-
 
 <PageLayout nav={true}>
   <main id="post-main">
@@ -14,23 +12,49 @@ const { title, pubDate, desc, tags } = Astro.props;
         <h1 id="post-title">{title}</h1>
         <div id="date-tags-container">
           <span>
-{pubDate.toLocaleDateString("en-us")}
+            {pubDate.toLocaleDateString("en-us")}
           </span>
 
-            {tags.map((tag: any) => (
-              <span class="tag text-sm">{tag}</span>
-            ))}
+          {tags.map((tag: any) => <span class="tag text-sm">{tag}</span>)}
         </div>
         <p id="post-desc">{desc}</p>
-      </div>
-      <hr>
 
-      <div>
-        <slot />
+        <div>
+          <label for="font-toggle" id="font-toggle-checkbox" class="checkbox">
+            <input type="checkbox" id="font-toggle" />
+            <span class="checkmark"></span>
+            Toggle serif font
+          </label>
+        </div>
       </div>
+
+      <hr />
+
+      <slot />
     </div>
   </main>
 </PageLayout>
+
+<script>
+  const toggle = document.getElementById("font-toggle");
+  const main = document.getElementById("post-main");
+  const savedFont = localStorage.getItem("blog-font");
+
+  if (savedFont === "serif" && toggle && main) {
+    toggle.checked = true;
+    main.classList.add("serif");
+  }
+
+  toggle?.addEventListener("change", () => {
+    if (toggle.checked) {
+      main?.classList.add("serif");
+      localStorage.setItem("blog-font", "serif");
+    } else {
+      main?.classList.remove("serif");
+      localStorage.setItem("blog-font", "mono");
+    }
+  });
+</script>
 
 <style>
   #post-main {
@@ -63,7 +87,21 @@ const { title, pubDate, desc, tags } = Astro.props;
 
   .tag {
     padding: 0px 10px;
-    background-color: var(--color-base-100)
+    background-color: var(--color-base-100);
   }
 
+  #font-toggle-checkbox {
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    background-color: var(--color-base-100);
+  }
+
+  #font-toggle-checkbox:hover {
+    background-color: var(--color-base-300);
+  }
+
+  hr {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 </style>
