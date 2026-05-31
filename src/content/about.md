@@ -3,7 +3,7 @@
 A paragraph on a webpage vainly summarizes a person, nevertheless, here is a short description of me.
 
 I am a computer science student at Georgia Tech, concentrating on devices and systems & architecture.
-Eagerly waiting to place fries in the bag, I spend my free time working on side projects, playing sports with friends, and exploring mountains and caves.
+Beyond sitting behind a screen and working on side projects, I spend my free time playing sports with friends, and exploring mountains and caves.
 
 ![Sunset over Yonah Mountain](../content/images/mtns.jpg)
 _Sunset over Yonah Mountain, September 2024_
