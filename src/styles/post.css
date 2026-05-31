@@ -20,9 +20,9 @@ code {
   background-color: var(--color-base-100);
 }
 
-p {
-  margin-bottom: 1lh;
-}
+/* p { */
+/*   margin-bottom: 1lh; */
+/* } */
 
 blockquote {
   background-color: var(--color-base-100);
