@@ -1,24 +1,36 @@
 ---
 import "../styles/global.css";
-
 import Navbar from "../components/Navbar.astro";
 
 const { nav } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Daniel Durling's personal site for information, projects, and posts."
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>dgd.dev</title>
-  </head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Daniel Durling's personal site for information, projects, and posts."
+  />
+  <meta name="generator" content={Astro.generator} />
+  <title>dgd.dev</title>
+
+  <script is:inline>
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const initialTheme = systemPrefersDark ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", initialTheme);
+    }
+  </script>
+
   <body>
     {
       nav && (
@@ -33,42 +45,6 @@ const { nav } = Astro.props;
     </div>
   </body>
 </html>
-
-<script>
-  // Stolen from https://design.dev/guides/dark-mode-css/
-
-  const getTheme = () => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      return savedTheme;
-    }
-
-    // Check for system theme preference
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  };
-
-  const setTheme = (theme: string) => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  };
-
-  function toggleTheme() {
-    const currentTheme = getTheme();
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const theme = getTheme();
-    setTheme(theme);
-
-    // Add toggle listener
-    const toggle = document.getElementById("theme-toggle");
-    toggle?.addEventListener("change", () => toggleTheme());
-  });
-</script>
 
 <style>
   body {

@@ -42,34 +42,38 @@ const projects = [
     name: "error-lobotomy",
     emoji: "😵",
     desc: "Let your ears be blessed by brainrot upon command failure",
-    link: "https://git.dgd.sh/dan/error-lobotomy",
-  }
-]
+    link: "https://github.com/daqnal/error-lobotomy",
+  },
+];
 ---
-
 
 <PageLayout nav={true}>
   <main id="projects-main">
     <div id="projects-content">
-      
       <h1>Projects</h1>
 
       <dl>
-        {projects.map((proj) => (
-          <div>
-            <dt>{proj.emoji} <a href={proj.link}>{proj.name}</a></dt>
-            <dd>{proj.desc}</dd>
-          </div>
-        ))}
+        {
+          projects.map((proj) => (
+            <div>
+              <dt>
+                {proj.emoji} <a href={proj.link}>{proj.name}</a>
+              </dt>
+              <dd>{proj.desc}</dd>
+            </div>
+          ))
+        }
       </dl>
 
-      <hr>
+      <hr />
 
-      <p id="projects-bottom-p">Find all of my public code on my <a href="https://git.dgd.sh">git server</a></p>
+      <p id="projects-bottom-p">
+        Find all of my public code on my <a href="https://git.dgd.sh"
+          >git server</a>
+      </p>
     </div>
   </main>
 </PageLayout>
-
 
 <style>
   #projects-main {
@@ -96,4 +100,3 @@ const projects = [
     margin-top: 1em;
   }
 </style>
-

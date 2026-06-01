@@ -62,7 +62,7 @@
 /* THEME */
 
 :root,
-html[data-theme="light"] {
+[data-theme="light"] {
   --color-base-100: oklch(0.9135 0.0068 277.16);
   --color-base-200: oklch(0.8734 0.02 270.19);
   --color-base-300: oklch(0.8366 0.0319 269.77);
@@ -85,7 +85,7 @@ html[data-theme="light"] {
   --color-error-content: oklch(22.629% 0.021 280.487);
 }
 
-html[data-theme="dark"] {
+[data-theme="dark"] {
   --color-base-100: oklch(22.629% 0.021 280.487);
   --color-base-200: oklch(20.398% 0.016 284.91);
   --color-base-300: oklch(17.491% 0.008 285.52);
@@ -145,6 +145,9 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 main {
@@ -180,31 +183,4 @@ input[type="checkbox"] {
 .serif,
 .serif * {
   font-family: "Libertinus Serif";
-}
-
-.checkbox {
-  cursor: pointer;
-}
-
-.checkbox .checkmark {
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  background-color: var(--color-base-content);
-  vertical-align: middle;
-  margin-right: 3px;
-  position: relative;
-  cursor: pointer;
-}
-
-.checkbox input:checked + .checkmark::after {
-  content: "";
-  position: absolute;
-  left: 0.22em;
-  top: 0.1em;
-  width: 0.2em;
-  height: 0.4em;
-  border: solid var(--color-base-200);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }

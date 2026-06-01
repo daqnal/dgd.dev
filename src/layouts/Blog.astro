@@ -23,7 +23,7 @@ const { title, pubDate, desc, tags } = Astro.props;
           <label for="font-toggle" id="font-toggle-checkbox" class="checkbox">
             <input type="checkbox" id="font-toggle" />
             <span class="checkmark"></span>
-            Toggle serif font
+            Serif font
           </label>
         </div>
       </div>
@@ -99,6 +99,33 @@ const { title, pubDate, desc, tags } = Astro.props;
 
   #font-toggle-checkbox:hover {
     background-color: var(--color-base-300);
+  }
+
+  .checkbox {
+    cursor: pointer;
+  }
+
+  .checkbox .checkmark {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: var(--color-base-content);
+    vertical-align: middle;
+    margin-right: 3px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .checkbox input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 0.22em;
+    top: 0.1em;
+    width: 0.2em;
+    height: 0.4em;
+    border: solid var(--color-base-200);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
   }
 
   hr {
