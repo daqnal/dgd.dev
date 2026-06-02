@@ -1,0 +1,120 @@
+<div id="theme-toggle-container-container">
+  <div id="theme-toggle-container">
+    <input type="checkbox" id="theme-toggle" />
+    <label for="theme-toggle" id="light-label" class="invisible">☀️</label>
+    <label for="theme-toggle" id="dark-label" class="invisible">🌑</label>
+    <script is:inline>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const lightLabel = document.getElementById("light-label");
+        const darkLabel = document.getElementById("dark-label");
+        const isDark = savedTheme ? savedTheme === "dark" : systemPrefersDark;
+        if (isDark) {
+          lightLabel?.classList.remove("invisible");
+        } else {
+          darkLabel?.classList.remove("invisible");
+        }
+      })();
+    </script>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById("theme-toggle") as HTMLInputElement;
+  const lightLabel = document.getElementById("light-label");
+  const darkLabel = document.getElementById("dark-label");
+
+  const updateLabelVisibility = (isDark: boolean) => {
+    if (isDark) {
+      lightLabel?.classList.remove("invisible");
+      darkLabel?.classList.add("invisible");
+    } else {
+      darkLabel?.classList.remove("invisible");
+      lightLabel?.classList.add("invisible");
+    }
+  };
+
+  if (toggle) {
+    const currTheme = document.documentElement.getAttribute("data-theme");
+    toggle.checked = currTheme === "dark";
+
+    updateLabelVisibility(toggle.checked);
+
+    toggle.addEventListener("change", () => {
+      const newTheme = toggle.checked ? "dark" : "light";
+
+      updateLabelVisibility(toggle.checked);
+
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+
+      window.dispatchEvent(
+        new CustomEvent("theme-changed", { detail: newTheme }),
+      );
+    });
+  }
+</script>
+
+<style>
+  #theme-toggle-container-container {
+    display: inline-flex;
+    align-items: center;
+    width: 1.3em;
+    height: 100%;
+  }
+
+  #theme-toggle-container {
+    width: 1.3em;
+    height: 1.3em;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    background-color: var(--color-base-300);
+    border-radius: 100%;
+  }
+
+  #theme-toggle-container label {
+    position: absolute;
+    font-size: 0.7em;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  #theme-toggle-container label {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #theme-toggle-container label:hover {
+    transform: scale(1.2) rotate(45deg);
+  }
+
+  /* #theme-toggle-container label:hover { */
+  /*   animation-name: zoom; */
+  /*   animation-timing-function: ease-in-out; */
+  /*   animation-duration: 0.2s; */
+  /*   animation-fill-mode: forwards; */
+  /* } */
+  /**/
+  /* #theme-toggle-container label:hover::after { */
+  /*   animation-name: zoom; */
+  /*   animation-timing-function: ease-in-out; */
+  /*   animation-duration: 0.2s; */
+  /*   animation-fill-mode: backwards; */
+  /* } */
+  /**/
+  /* @keyframes zoom { */
+  /*   from { */
+  /*     transform: scale(1); */
+  /*   } */
+  /*   to { */
+  /*     transform: scale(1.2); */
+  /*   } */
+  /* } */
+
+  .invisible {
+    display: none;
+  }
+</style>

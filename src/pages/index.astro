@@ -1,18 +1,20 @@
 ---
 import PageLayout from "../layouts/Page.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 ---
 
 <PageLayout>
   <main id="landing-main">
     <div id="landing-content">
       <h1 id="landing-title">Daniel Durling</h1>
-      <p>
+      <div id="clickables-container">
         <a href="/projects">[/projects]</a>
         <span> | </span>
+        <a href="/about">[/about]</a>
         <!-- <a href="/posts">[/posts]</a> -->
         <!-- <span> | </span> -->
-        <a href="/about">[/about]</a>
-      </p>
+        <!-- <ThemeToggle darkBg={true} /> -->
+      </div>
 
       <hr id="landing-hr" />
 
@@ -52,6 +54,13 @@ import PageLayout from "../layouts/Page.astro";
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  #clickables-container {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    gap: 8px;
   }
 
   #landing-list {

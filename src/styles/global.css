@@ -164,6 +164,7 @@ ul {
 
 hr {
   width: 100%;
+  border-color: var(--color-base-content);
 }
 
 input[type="checkbox"] {
