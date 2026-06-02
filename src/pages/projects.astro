@@ -15,16 +15,16 @@ const projects = [
     link: "https://git.dgd.sh/dan/hyprland-dotfiles",
   },
   {
-    name: "rat",
-    emoji: "🐀",
-    desc: "The legendary spinning rat, now in 3d and on the web",
-    link: "https://rat.dance",
-  },
-  {
     name: "flowy.surf",
     emoji: "🌊",
     desc: "Visual flowchart editor for tracking project progress",
     link: "https://flowy.surf",
+  },
+  {
+    name: "Lighthouse Projects",
+    emoji: "🌅",
+    desc: "Collab website with the Dominican non-profit ministry 'Lighthouse Projects'",
+    link: "https://www.lighthousedr.org/",
   },
   {
     name: "Apologetics Club",
@@ -38,38 +38,69 @@ const projects = [
     desc: "A pretty start template for a Hugo blog, search included",
     link: "https://git.dgd.sh/dan/blog-template",
   },
+];
+
+const sillyProjects = [
+  {
+    name: "rat",
+    emoji: "🐀",
+    desc: "The legendary spinning rat, now in 3d and on the web",
+    link: "https://rat.dance",
+  },
   {
     name: "error-lobotomy",
     emoji: "😵",
     desc: "Let your ears be blessed by brainrot upon command failure",
-    link: "https://git.dgd.sh/dan/error-lobotomy",
-  }
-]
+    link: "https://github.com/daqnal/error-lobotomy",
+  },
+];
 ---
-
 
 <PageLayout nav={true}>
   <main id="projects-main">
     <div id="projects-content">
-      
       <h1>Projects</h1>
 
       <dl>
-        {projects.map((proj) => (
-          <div>
-            <dt>{proj.emoji} <a href={proj.link}>{proj.name}</a></dt>
-            <dd>{proj.desc}</dd>
-          </div>
-        ))}
+        {
+          projects.map((proj) => (
+            <div>
+              <dt>
+                {proj.emoji} <a href={proj.link}>{proj.name}</a>
+              </dt>
+              <dd>{proj.desc}</dd>
+            </div>
+          ))
+        }
       </dl>
 
-      <hr>
+      <hr />
 
-      <p id="projects-bottom-p">Find all of my public code on my <a href="https://git.dgd.sh">git server</a></p>
+      <h2>Silly Projects</h2>
+
+      <dl>
+        {
+          sillyProjects.map((proj) => (
+            <div>
+              <dt>
+                {proj.emoji} <a href={proj.link}>{proj.name}</a>
+              </dt>
+              <dd>{proj.desc}</dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <hr />
+
+      <p id="projects-bottom-p">
+        Find all of my public code on my <a href="https://git.dgd.sh"
+          >git server</a
+        > or <a href="https://github.com">GitHub</a>
+      </p>
     </div>
   </main>
 </PageLayout>
-
 
 <style>
   #projects-main {
@@ -96,4 +127,3 @@ const projects = [
     margin-top: 1em;
   }
 </style>
-

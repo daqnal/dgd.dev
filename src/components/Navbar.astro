@@ -2,12 +2,78 @@
   <div>
     <a href="/" id="navbar-title">dgd.dev</a>
   </div>
-  <div>
-    <a href="/">[/]</a>
-    <a href="/projects">[/projects]</a>
-    <a href="/about">[/about]</a>
+  <div id="nav-right">
+    <div id="theme-toggle-container-container">
+      <div id="theme-toggle-container">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" id="light-label" class="invisible">☀️</label>
+        <label for="theme-toggle" id="dark-label" class="invisible">🌙</label>
+        <script is:inline>
+          (function () {
+            const savedTheme = localStorage.getItem("theme");
+            const systemPrefersDark = window.matchMedia(
+              "(prefers-color-scheme: dark)",
+            ).matches;
+            const lightLabel = document.getElementById("light-label");
+            const darkLabel = document.getElementById("dark-label");
+            const isDark = savedTheme
+              ? savedTheme === "dark"
+              : systemPrefersDark;
+            if (isDark) {
+              lightLabel?.classList.remove("invisible");
+            } else {
+              darkLabel?.classList.remove("invisible");
+            }
+          })();
+        </script>
+      </div>
+    </div>
+    <span>|</span>
+    <span>
+      <a href="/">[/]</a>
+      <a href="/projects">[/projects]</a>
+      <a href="/posts">[/posts]</a>
+      <a href="/about">[/about]</a>
+    </span>
   </div>
 </nav>
+
+<script>
+  const toggle = document.getElementById("theme-toggle") as HTMLInputElement;
+  const lightLabel = document.getElementById("light-label");
+  const darkLabel = document.getElementById("dark-label");
+
+  const updateLabelVisibility = (isDark: boolean) => {
+    if (isDark) {
+      lightLabel?.classList.remove("invisible");
+      darkLabel?.classList.add("invisible");
+    } else {
+      darkLabel?.classList.remove("invisible");
+      lightLabel?.classList.add("invisible");
+    }
+  };
+
+  if (toggle) {
+    const currTheme = document.documentElement.getAttribute("data-theme");
+    toggle.checked = currTheme === "dark";
+
+    updateLabelVisibility(toggle.checked);
+
+    toggle.addEventListener("change", () => {
+      const newTheme = toggle.checked ? "dark" : "light";
+
+      updateLabelVisibility(toggle.checked);
+
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+
+      window.dispatchEvent(
+        new CustomEvent("theme-changed", { detail: newTheme }),
+      );
+    });
+  }
+</script>
+
 <style>
   #navbar {
     display: flex;
@@ -22,5 +88,39 @@
   #navbar-title {
     text-decoration: none;
     color: var(--color-base-content);
+  }
+
+  #nav-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #theme-toggle-container-container {
+    display: inline-flex;
+    align-items: center;
+    width: 1.3em;
+    height: 100%;
+  }
+
+  #theme-toggle-container {
+    width: 1.3em;
+    height: 1.3em;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    background-color: var(--color-base-200);
+    border-radius: 100%;
+  }
+
+  #theme-toggle-container label {
+    position: absolute;
+    font-size: 0.7em;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .invisible {
+    display: none;
   }
 </style>

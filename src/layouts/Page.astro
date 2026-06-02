@@ -1,42 +1,55 @@
 ---
-
 import "../styles/global.css";
-
 import Navbar from "../components/Navbar.astro";
 
 const { nav } = Astro.props;
 ---
 
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    <title>dgd.dev</title>
-	</head>
-	<body>
-    {nav && (
-    <header>
-      <Navbar />
-    </header>
-    )}
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Daniel Durling's personal site for information, projects, and posts."
+  />
+  <meta name="generator" content={Astro.generator} />
+  <title>dgd.dev</title>
+
+  <script is:inline>
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      const systemPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const initialTheme = systemPrefersDark ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", initialTheme);
+    }
+  </script>
+
+  <body>
+    {
+      nav && (
+        <header>
+          <Navbar />
+        </header>
+      )
+    }
 
     <div id="scrollable">
       <slot />
     </div>
-	</body>
+  </body>
 </html>
 
-
 <style>
-
   body {
     min-height: 100%;
     height: fit-content;
-    overflow-y: none;
     display: flex;
     flex-direction: column;
   }
@@ -48,4 +61,3 @@ const { nav } = Astro.props;
     flex-direction: column;
   }
 </style>
-
