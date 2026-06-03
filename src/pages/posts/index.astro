@@ -12,7 +12,7 @@ const sortedPosts = allPosts.sort((a: any, b: any) => {
   return dateB - dateA;
 });
 
-const showPosts = false;
+const showPosts = true;
 ---
 
 
@@ -20,46 +20,26 @@ const showPosts = false;
   <main id="posts-main">
     <div id="posts-content">
       {showPosts ? (
-      <h1>Posts</h1>
-      <h1>Posts</h1>
-      <dl>
-        {sortedPosts.map((post: any) => {
-          const link = "/posts/" + post.id;
-          const dateString = post.data.pubDate.toLocaleDateString('en-US');
+        <h1>Posts</h1>
+        <dl>
+          {sortedPosts.map((post: any) => {
+            const link = "/posts/" + post.id;
+            const dateString = post.data.pubDate.toLocaleDateString('en-US');
 
-          return (
-            <div>
-              <dt>
-                <a href={link}>
-                  {post.data.title}
-                </a>
-              </dt>
-              <dd>
-                {dateString}
-              </dd>
-            </div>
-          );
-        })}
-      </dl>
-      <dl>
-        {sortedPosts.map((post: any) => {
-          const link = "/posts/" + post.id;
-          const dateString = post.data.pubDate.toLocaleDateString('en-US');
-
-          return (
-            <div>
-              <dt>
-                <a href={link}>
-                  {post.data.title}
-                </a>
-              </dt>
-              <dd>
-                {dateString}
-              </dd>
-            </div>
-          );
-        })}
-      </dl>
+            return (
+              <div>
+                <dt>
+                  <a href={link}>
+                    {post.data.title}
+                  </a>
+                </dt>
+                <dd>
+                  {dateString}
+                </dd>
+              </div>
+            );
+          })}
+        </dl>
 
       ) : (
       <div style="text-align: center;">

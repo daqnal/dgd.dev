@@ -16,16 +16,19 @@ p em {
   font-size: 0.7em;
 }
 
-code {
-  background-color: var(--color-base-100);
+code,
+code span span {
+  font-family: "0xProto" !important;
+}
+
+code,
+pre {
+  background-color: var(--color-base-300) !important;
+  padding: 0px 4px;
 }
 
 p {
-  margin-bottom: 1lh;
-}
-
-blockquote p {
-  margin-bottom: 0;
+  margin: 0.5lh 0;
 }
 
 blockquote {
@@ -34,4 +37,26 @@ blockquote {
   padding: 0 10px;
   margin-left: 10px;
   margin-right: 0;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 4px 8px;
+}
+
+th {
+  background-color: var(--color-base-100);
+}
+
+td {
+  background-color: var(--color-base-200);
+}
+
+table {
+  background-color: var(--color-base-content);
 }

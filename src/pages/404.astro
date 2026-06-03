@@ -1,0 +1,47 @@
+---
+import PageLayout from "../layouts/Page.astro";
+import "../styles/global.css";
+---
+
+<PageLayout>
+  <div>
+    <p>😳</p>
+    <h1>404</h1>
+    <h2>This page does not exist</h2>
+    <button onclick="history.back()">Go back</button>
+  </div>
+</PageLayout>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 100vh;
+    text-align: center;
+  }
+
+  p {
+    font-size: 5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-primary-content);
+    width: 50%;
+    max-width: 100px;
+    min-height: 30px;
+  }
+
+  button:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 70%, transparent);
+  }
+</style>
