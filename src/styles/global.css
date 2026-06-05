@@ -69,7 +69,7 @@
   --color-base-content: oklch(0.3847 0.0208 274.31);
   --color-primary: oklch(0.4762 0.1402 260.22);
   --color-primary-content: oklch(22.629% 0.021 280.487);
-  --color-secondary: oklch(75.146% 0.134 299.499);
+  --color-secondary: oklch(0.6041 0.2245 299.48);
   --color-secondary-content: oklch(22.629% 0.021 280.487);
   --color-accent: oklch(82.004% 0.105 235.715);
   --color-accent-content: oklch(22.629% 0.021 280.487);
@@ -158,6 +158,10 @@ a {
   color: var(--color-primary);
 }
 
+a:visited {
+  color: var(--color-secondary);
+}
+
 ul {
   padding-inline-start: 25px;
 }
@@ -184,4 +188,8 @@ input[type="checkbox"] {
 .serif,
 .serif * {
   font-family: "Libertinus Serif";
+}
+
+.serif * code {
+  font-size: 0.85em;
 }

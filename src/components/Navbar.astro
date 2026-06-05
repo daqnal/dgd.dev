@@ -7,7 +7,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     <a href="/" id="navbar-title">dgd.dev</a>
   </div>
   <div id="nav-right">
-    <span>
+    <span id="links-span">
       <a href="/">[/]</a>
       <a href="/projects">[/projects]</a>
       <!-- <a href="/posts">[/posts]</a> -->
@@ -38,5 +38,25 @@ import ThemeToggle from "./ThemeToggle.astro";
     display: flex;
     gap: 10px;
     align-items: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    #links-span {
+      font-size: 0.85em;
+    }
+
+    #nav-right {
+      gap: 5px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #navbar {
+      font-size: 0.8em;
+    }
+
+    #navbar-title {
+      display: none;
+    }
   }
 </style>
