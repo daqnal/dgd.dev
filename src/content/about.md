@@ -1,11 +1,9 @@
 # About
 
-A paragraph on a webpage vainly summarizes a person, nevertheless, here is a short description of me.
+I am a computer science student at Georgia Tech, concentrating on Devices and Systems & Architecture.
+When time allows, I work on full-stack side projects and rice my Linux desktop.
 
-I am a computer science student at Georgia Tech, concentrating on devices and systems & architecture.
-In my free time, I develop full-stack apps and sites and rice my Linux desktop.
-
-Beyond sitting behind a screen and working on side projects, I spend my free time playing sports with friends and exploring mountains and caves.
+Beyond sitting behind a screen and working on side projects, I enjoy playing sports with friends and exploring mountains and caves.
 
 ![Sunset over Yonah Mountain](../content/images/mtns.webp)
 _Sunset over Yonah Mountain, September 2024_
@@ -21,7 +19,7 @@ I don't have any social media. For business purposes, reach out to <dgdurling@pm
 
 - [Git server](https://git.dgd.sh)
 - [GitHub (mirror)](https://github.com/daqnal)
-- [LinkedIn](https://linkedin.com/in/dgdur)
+- [LinkedIn](https://linkedin.com/in/dgdur) (I don't check messages here)
 
 ---
 
