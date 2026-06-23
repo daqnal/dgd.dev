@@ -175,6 +175,10 @@ input[type="checkbox"] {
   display: none;
 }
 
+sup {
+  font-size: 0.75em;
+}
+
 /* CLASSES */
 
 .text-sm {

@@ -12,7 +12,7 @@ img {
   height: auto;
 }
 
-p em {
+p img + em {
   font-size: 0.7em;
 }
 
