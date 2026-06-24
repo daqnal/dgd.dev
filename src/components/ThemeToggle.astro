@@ -1,8 +1,42 @@
 <div id="theme-toggle-container-container">
   <div id="theme-toggle-container">
     <input type="checkbox" id="theme-toggle" />
-    <label for="theme-toggle" id="light-label" class="invisible">☀️</label>
-    <label for="theme-toggle" id="dark-label" class="invisible">🌑</label>
+    <label for="theme-toggle" id="light-label" class="invisible">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-sun-icon lucide-sun"
+        ><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path
+          d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path
+          d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path
+          d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path
+          d="m19.07 4.93-1.41 1.41"></path></svg
+      >
+    </label>
+    <label for="theme-toggle" id="dark-label" class="invisible">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-moon-icon lucide-moon"
+        ><path
+          d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+        ></path></svg
+      >
+    </label>
     <script is:inline>
       (function () {
         const savedTheme = localStorage.getItem("theme");
@@ -77,42 +111,25 @@
   }
 
   #theme-toggle-container label {
+    width: 16px;
+    height: 16px;
+  }
+
+  #theme-toggle-container label svg {
     position: absolute;
-    font-size: 0.7em;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
     user-select: none;
   }
 
-  #theme-toggle-container label {
+  #theme-toggle-container label svg {
     transition: transform 0.2s ease-in-out;
   }
 
-  #theme-toggle-container label:hover {
-    transform: scale(1.2) rotate(45deg);
+  #theme-toggle-container label svg:hover {
+    transform: scale(1.1) rotate(45deg);
   }
-
-  /* #theme-toggle-container label:hover { */
-  /*   animation-name: zoom; */
-  /*   animation-timing-function: ease-in-out; */
-  /*   animation-duration: 0.2s; */
-  /*   animation-fill-mode: forwards; */
-  /* } */
-  /**/
-  /* #theme-toggle-container label:hover::after { */
-  /*   animation-name: zoom; */
-  /*   animation-timing-function: ease-in-out; */
-  /*   animation-duration: 0.2s; */
-  /*   animation-fill-mode: backwards; */
-  /* } */
-  /**/
-  /* @keyframes zoom { */
-  /*   from { */
-  /*     transform: scale(1); */
-  /*   } */
-  /*   to { */
-  /*     transform: scale(1.2); */
-  /*   } */
-  /* } */
 
   .invisible {
     display: none;

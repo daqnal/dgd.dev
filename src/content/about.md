@@ -17,34 +17,63 @@ Every developer has their dogmas, so here I list some beliefs I have about how s
 
 ### Free Software
 
-Free software isn't software that doesn't cost money; it is the idea that "gives the user the freedom to share, study, and modify it." The Free Software Movement of the 80's and 90's served to liberate users and developers from digital tyranny by megacompanies distributing rigid, proprietary software. Virtually every tool, every company, and every computer on earth rely on some result of the movement. Free software undergirds how your computer and phone download files from the internet, play video and audio, and display websites, among countless other operations. In fact, Linux, possibly the most popular result of the Free Software Movement, runs roughly 44% of all cloud compute in the world.[^1]
+Free software isn't software that doesn't cost money; it is the idea that "gives the user the freedom to share, study, and modify it." The Free Software Movement of the 80's and 90's served to liberate users and developers from digital tyranny by megacompanies distributing rigid, proprietary software. Virtually every tool, every company, and every computer on earth rely on some result of the movement. Free software undergirds how your computer and phone download files from the internet, play video and audio, and display websites, among countless other operations. In fact, Linux, possibly the most popular result of the Free Software Movement, [runs roughly 44% of all cloud compute in the world](https://www.mordorintelligence.com/industry-reports/server-operating-system-market).
 
 This movement is the root of most creativity, freedom, and research regarding software and the internet. While the movement largely succeeded in its goals, the majority of software that people use today is proprietary code on top of these projects. Hackability and privacy are locked under binary blobs of code.
 
 Developers today ought to honor the philosophy that gave them their ability to learn from and contribute to codebases. In almost every circumstance, I believe in writing free and open source software, even when it may make immediate profitability more difficult for a company.
 
-For more information on free software, see the Free Software Foundation's literature[^2].
+For more information on free software, see the [Free Software Foundation's literature](https://www.fsf.org/about/what-is-free-software).
 
-### Minimize Complexity
+### Minimal Complexity
 
 As a developer, one should **always** be seeking to minimize complexity.
 Often, how complex a project will be is determined when the idea is conceived.
 Choice of architecture and feature scope affect complexity the most, which may materializes short or long after the choices were made.
 
-The Unix philosophy encompasses this idea well. One of the creators of the philosophy compiled the following "maxims."[^3]
+The Unix philosophy encompasses this idea well. One of the creators of the philosophy compiled the following [maxims](https://archive.org/details/bstj57-6-1899):
 
-- Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
-- Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
-- Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
-- Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.[^4]
+> - Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
+> - Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
+> - Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
+> - Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
 
-As outlined above, these projects defined the software world, so the maxims that built Unix should at least be considered.
+See a good summary of the Unix philosophy [here](http://www.catb.org/~esr/writings/taoup/html/ch01s06.html).
+
+As outlined above, these projects defined the software world, so the ideas that built Unix should at least be considered.
 However, organizations today seem desperate to pack as many hot new features in their software using the hot new framework that came out last week.
-The NPM JavaScript ecosystem particularly causes feature packed websites at the cost of bloated development environments, slower load times, and a fresh vulnerability each week.[^5]
+The NPM JavaScript ecosystem particularly causes feature packed websites at the cost of bloated development environments, [slower load times](https://bundlephobia.com), and a fresh vulnerability each week.
 
-Most of the time, the complexity is inevitable based upon the stack, as is the case of most websites. Other times, often under large companies, software begins relatively simple, then _feature creep_ occurs.
+Consider a popular recipe website like [allrecipes.com](https://www.allrecipes.com/).
+When a person clicks on a link to that website, they likely have one goal in mind: reading a recipe, assumedly some text and a few pictures.
 
-To give an example of the consequences of complexity, consider Microsoft Outlook.
+Instead, the site bombards them with the following before getting to the content:
+
+- Thick header with lots of white space
+- Banner ads announcements
+- Full screen ads
+- Popup autoplaying videos
+
+All of this bloat requires megabytes of data to be downloaded, not to mention the trackers, analytics, and actual photos and content of the recipe.
+Using the ad blocker [uMatrix](https://github.com/gorhill/uMatrix) reveals just how much _junk_ allrecipes.com is fetching.
+
+![Screenshot of uMatrix on allrecipes.com](../content/images/allrecipes_umatrix.png)
+
+The cells in green are the content that is loaded by the actual site (allrecipes.com), while the cells in red are 3rd party requests that uMatrix blocks.
+Ironic that the site still loads the header, recipe text and images, comments, and footer when all of the domains in red are blocked.
+None of it is essential to the page loading, yet it still loads and eats your device's bandwidth and battery.
+
+So of the code running on this website is antiproductive to the user.
+It costs time, energy, and money to develop and arguably to run, but it only inhibits the user's goal of viewing a recipe.
+
+Sites like these, which are most of the top sites on the internet, exemplify the opposite of minimalism.
+Bandwith ought to be treated as a resource. JavaScript ought to be a last resort, when a **necessary** feature **cannot** be implemented with pure HTML and CSS.
+There is more to say about the web, so see [Luke Smith's video on the topic](https://youtu.be/cvDyQUpaFf4).
+
+In the case of web development, the project is often doomed to complexity before it begins due to the nature of the tooling available.
+However, sometimes projects begin relatively simple, then _feature creep_ occurs.
+
+To give an example of the consequences of incremental complexity, consider Microsoft Outlook.
 The email service used to be a favorite among profesisonals using Windows.
 Recently, it has fallen from grace due to a variety of software design choices that resulted in _New Outlook_.
 
@@ -57,11 +86,7 @@ Despite its flaws, Classic Outlook was functional and had a clear UI. The comple
 
 Unfortunately, the idea of minimizing complexity is not taken seriously enough today. _Minimalism_ is either touted as a feature by developers trying to glaze their small project or sequestered to a subculture of the Linux development world.
 
-Lines of code is not a metric to brag about, unless the number is small and the software is very useful. The [suckless](https://suckless.org) group exemplify good software resulting form minimal complexity. Their philosophy is worth a read.[^6]
-
-<!-- ### Pop Web Design is Ugly and Unusable -->
-<!---->
-<!-- Consider a popular recipe website like [allrecipes.com](https://www.allrecipes.com/). -->
+Lines of code is not a metric to brag about, unless the number is small and the software is very useful. The [suckless](https://suckless.org) group exemplify good software resulting from minimal complexity. Their [philosophy](https://suckless.org/philosophy/) is worth a read.
 
 ## Contact
 
@@ -77,15 +102,3 @@ I don't have any social media. For business purposes, reach out to <dgdurling@pm
 
 This site was made using [Astro](https://astro.build) and pure CSS and JS.
 See the source code [here](https://git.dgd.sh/dan/dgd.dev).
-
-[^1]: [Server Operating System Market Size, Outlook & Report Analysis, 2031](https://www.mordorintelligence.com/industry-reports/server-operating-system-market)
-
-[^2]: [What is Free Software?](https://www.fsf.org/about/what-is-free-software)
-
-[^3]: [Basics of the Unix Philosophy](http://www.catb.org/~esr/writings/taoup/html/ch01s06.html)
-
-[^4]: [UNIX Time-Sharing System: Forward](https://archive.org/details/bstj57-6-1899/page/n3/mode/2up)
-
-[^5]: [Bundlephobia](https://bundlephobia.com)
-
-[^6]: [suckless software philosophy](https://suckless.org/philosophy/)
