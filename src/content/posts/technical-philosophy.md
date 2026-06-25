@@ -7,9 +7,11 @@ tags: ["tech", "foss", "minimalism"]
 
 Every developer has their dogmas, so here I list some beliefs I have about how software should be designed, written, and maintained.
 
+Expect this page to update and change over time.
+
 ## Free Software
 
-Free software isn't software that doesn't cost money; it is the idea that "gives the user the freedom to share, study, and modify it." The Free Software Movement of the 80's and 90's served to liberate users and developers from digital tyranny by megacompanies distributing rigid, proprietary software. Virtually every tool, every company, and every computer on earth rely on some result of the movement. Free software undergirds how your computer and phone download files from the internet, play video and audio, and display websites, among countless other operations. In fact, Linux, possibly the most popular result of the Free Software Movement, [runs roughly 44% of all cloud compute in the world](https://www.mordorintelligence.com/industry-reports/server-operating-system-market).
+Free software isn't software that doesn't cost money; it is "software that gives you the user freedom to share, study, and modify it." The Free Software Movement of the 80's and 90's served to liberate users and developers from digital tyranny by megacompanies distributing rigid, proprietary software. Virtually every tool, every company, and every computer on earth rely on some result of the movement. Free software undergirds how your computer and phone download files from the internet, play video and audio, and display websites, among countless other operations. In fact, Linux, possibly the most popular result of the Free Software Movement, [runs roughly 44% of all cloud compute in the world](https://www.mordorintelligence.com/industry-reports/server-operating-system-market).
 
 This movement is the root of most creativity, freedom, and research regarding software and the internet. While the movement largely succeeded in its goals, the majority of software that people use today is proprietary code on top of these projects. Hackability and privacy are locked under binary blobs of code.
 
@@ -21,7 +23,7 @@ For more information on free software, see the [Free Software Foundation's liter
 
 As a developer, one should **always** be seeking to minimize complexity.
 Often, how complex a project will be is determined when the idea is conceived.
-Choice of architecture and feature scope affect complexity the most, which may materializes short or long after the choices were made.
+Choice of architecture and feature scope affect complexity the most, which may materializes long after the choices were made.
 
 The Unix philosophy encompasses this idea well. One of the creators of the philosophy compiled the following [maxims](https://archive.org/details/bstj57-6-1899):
 
@@ -37,9 +39,9 @@ However, organizations today seem desperate to pack as many hot new features in 
 The NPM JavaScript ecosystem particularly causes feature packed websites at the cost of bloated development environments, [slower load times](https://bundlephobia.com), and a fresh vulnerability each week.
 
 Consider a popular recipe website like [allrecipes.com](https://www.allrecipes.com/).
-When a person clicks on a link to that website, they likely have one goal in mind: reading a recipe, assumedly some text and a few pictures.
+When a person clicks on a link to that website, they likely have one goal in mind: read a recipe, which includes some text and a few pictures.
 
-Instead, the site bombards them with the following before getting to the content:
+Instead, the site bombards them with the following:
 
 - Thick header with lots of white space
 - Banner ads announcements
@@ -52,10 +54,9 @@ Using the ad blocker [uMatrix](https://github.com/gorhill/uMatrix) reveals just 
 ![Screenshot of uMatrix on allrecipes.com](../images/allrecipes_umatrix.png)
 
 The cells in green are the content that is loaded by the actual site (allrecipes.com), while the cells in red are 3rd party requests that uMatrix blocks.
-Ironic that the site still loads the header, recipe text and images, comments, and footer when all of the domains in red are blocked.
-None of it is essential to the page loading, yet it still loads and eats your device's bandwidth and battery.
-
-So of the code running on this website is antiproductive to the user.
+Ironically, the site still loads the header, recipe text and images, comments, and footer when all of the domains in red are blocked.
+None of the junk is essential to the page loading, yet it still loads and eats your device's bandwidth and battery.
+Therefore, a great majority of the code running on this website is antiproductive to the user.
 It costs time, energy, and money to develop and arguably to run, but it only inhibits the user's goal of viewing a recipe.
 
 Sites like these, which are most of the top sites on the internet, exemplify the opposite of minimalism.
