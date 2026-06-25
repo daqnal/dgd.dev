@@ -10,11 +10,13 @@ import ThemeToggle from "./ThemeToggle.astro";
     <span id="links-span">
       <a href="/">[/]</a>
       <a href="/projects">[/projects]</a>
-      <!-- <a href="/posts">[/posts]</a> -->
+      <a href="/posts">[/posts]</a>
       <a href="/about">[/about]</a>
     </span>
-    <span>|</span>
-    <ThemeToggle />
+    <span>
+      <span>|</span>
+      <ThemeToggle />
+    </span>
   </div>
 </nav>
 
@@ -50,9 +52,14 @@ import ThemeToggle from "./ThemeToggle.astro";
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     #navbar-title {
       display: none;
+    }
+
+    #nav-right {
+      width: 100%;
+      justify-content: space-between;
     }
   }
 </style>

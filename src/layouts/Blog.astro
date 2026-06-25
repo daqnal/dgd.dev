@@ -10,22 +10,22 @@ const { title, pubDate, desc, tags } = Astro.props;
     <div id="post-container">
       <div>
         <h1 id="post-title">{title}</h1>
-        <div id="date-tags-container">
-          <span>
-            {pubDate.toLocaleDateString("en-us")}
-          </span>
-
-          {tags.map((tag: any) => <span class="tag text-sm">{tag}</span>)}
-        </div>
         <p id="post-desc">{desc}</p>
+        <p id="date-container">
+          {pubDate.toLocaleDateString("en-us")}
+        </p>
 
-        <div>
-          <label for="font-toggle" id="font-toggle-checkbox" class="checkbox">
-            <input type="checkbox" id="font-toggle" />
-            <span class="checkmark"></span>
-            Serif font
-          </label>
-        </div>
+        <p id="tags-container">
+          {tags.map((tag: any) => <span class="tag text-sm">{tag}</span>)}
+        </p>
+
+        <!-- <div id="font-toggle-container"> -->
+        <!--   <label for="font-toggle" id="font-toggle-checkbox" class="checkbox"> -->
+        <!--     <input type="checkbox" id="font-toggle" /> -->
+        <!--     <span class="checkmark"></span> -->
+        <!--     Serif font -->
+        <!--   </label> -->
+        <!-- </div> -->
       </div>
 
       <hr />
@@ -66,7 +66,7 @@ const { title, pubDate, desc, tags } = Astro.props;
 
   #post-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     min-height: 100%;
     margin: 40px 0;
     padding: 0 10px;
@@ -75,15 +75,16 @@ const { title, pubDate, desc, tags } = Astro.props;
     justify-content: center;
   }
 
-  #post-desc {
+  #font-toggle-container {
     margin: 10px 0;
   }
 
-  #date-tags-container {
+  #tags-container {
     width: 100%;
     display: flex;
     gap: 10px;
     align-items: center;
+    margin: 8px 0;
   }
 
   .tag {
