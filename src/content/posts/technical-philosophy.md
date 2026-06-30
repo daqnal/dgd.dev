@@ -3,6 +3,7 @@ title: Technical Philosophy
 pubDate: 2026-06-24
 desc: How software should be designed and written
 tags: ["tech", "foss", "minimalism"]
+draft: false
 ---
 
 Every developer has their dogmas, so here I list some beliefs I have about how software should be designed, written, and maintained.

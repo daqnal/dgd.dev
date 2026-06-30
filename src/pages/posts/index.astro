@@ -2,9 +2,11 @@
 ---
 import PageLayout from "../../layouts/Page.astro";
 
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const allPosts = await getCollection('posts');
+  const allPosts = await getCollection("posts", ({ data }) => {
+    return data.draft !== true;
+  });
 
 const sortedPosts = allPosts.sort((a: any, b: any) => {
   const dateA = a.data.pubDate ? new Date(a.data.pubDate).getTime() : 0;
@@ -24,7 +26,7 @@ const showPosts = true;
         <dl>
           {sortedPosts.map((post: any) => {
             const link = "/posts/" + post.id;
-            const dateString = post.data.pubDate.toLocaleDateString('en-US');
+            const dateString = post.data.pubDate.toLocaleDateString("en-US");
 
             return (
               <div>
